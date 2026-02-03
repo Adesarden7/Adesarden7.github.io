@@ -7,7 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
-        /* Sticky Mini-Nav for Mobile Space Optimization */
         .sticky-nav { transition: all 0.3s ease; }
         @media (max-width: 768px) {
             .sticky-nav { padding: 0.5rem 1rem; }
@@ -33,7 +32,6 @@
 
     <section class="max-w-7xl mx-auto py-12 md:py-20 px-6">
         <div class="grid lg:grid-cols-12 gap-12 items-start">
-            
             <div class="lg:col-span-7 space-y-10 animate-fade-in">
                 <div>
                     <h2 class="text-4xl md:text-6xl font-black text-slate-800 border-b-8 border-blue-600 inline-block pb-2 uppercase tracking-tighter mb-8">Narrative Restoration</h2>
@@ -56,7 +54,7 @@
                     </div>
                 </div>
 
-                <div class="flex items-center gap-6 p-8 bg-white shadow-2xl rounded-2xl border-l-[12px] border-blue-600 transform hover:scale-[1.01] transition-all">
+                <div class="flex items-center gap-6 p-8 bg-white shadow-2xl rounded-2xl border-l-[12px] border-blue-600">
                     <img src="engagement.2.png" alt="Axel Desarden" class="w-20 h-20 rounded-full border-2 border-blue-100 shadow-sm object-cover">
                     <p class="text-xl md:text-2xl font-black italic text-blue-900 leading-tight">"The pen is in your hands — you have the power to write the next chapter."</p>
                 </div>
@@ -64,12 +62,8 @@
             
             <div class="lg:col-span-5 flex flex-col gap-6">
                 <img src="bluejay-strategy-session.png" alt="Institutional Strategy" class="rounded-2xl shadow-xl border-2 border-white w-full">
-                
-                <div class="relative">
-                    <img src="engagement.2.png" alt="Transformation Session" class="rounded-2xl shadow-2xl border-4 border-white object-cover object-[center_20%] w-full h-[550px]">
-                </div>
-
-                <img src="principal-consultant-network.jpg" alt="Professional Networking" class="rounded-2xl shadow-lg border border-slate-200 w-full grayscale opacity-80 hover:grayscale-0 transition-all duration-500">
+                <img src="engagement.2.png" alt="Transformation Session" class="rounded-2xl shadow-2xl border-4 border-white object-cover object-[center_20%] w-full h-[550px]">
+                <img src="principal-consultant-network.jpg" alt="Professional Networking" class="rounded-2xl shadow-lg border border-slate-200 w-full grayscale opacity-80">
             </div>
         </div>
     </section>
@@ -84,14 +78,63 @@
         </div>
     </section>
 
+    <section class="bg-slate-900 py-24 px-6 text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16 items-center mb-16">
+                <div>
+                    <h2 class="text-4xl font-bold mb-8 uppercase tracking-widest text-blue-400">The Cinematic Catalyst</h2>
+                    <p class="text-lg text-slate-300 mb-8 leading-relaxed">
+                        The film <strong>"Distorted Perception of Innocence"</strong> serves as the visceral entry point for Narrative Restoration.
+                    </p>
+                    <div class="bg-blue-600/10 border border-blue-500/30 p-8 rounded-2xl">
+                        <h4 class="font-bold text-blue-400 mb-2 uppercase tracking-widest text-sm">Institutional Outcomes:</h4>
+                        <p class="text-slate-200 italic">An intervention designed to move students from reactive stress to proactive agency and awareness.</p>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <img src="MoviePoster16x24Low-Res12mb (1).jpg" alt="Film Poster" class="rounded-lg shadow-2xl max-w-sm border-2 border-slate-700">
+                </div>
+            </div>
+            <div class="max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-800 bg-black">
+                <video controls muted class="w-full aspect-video">
+                    <source src="Cinematic_Catalyst_Overview.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-12 text-slate-800 uppercase tracking-widest">Published Frameworks</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-slate-50 p-6 rounded-2xl shadow-md border border-slate-100">
+                    <img src="dpi_book.JPG" alt="DPI Book" class="w-full h-80 object-cover shadow-xl mb-6 rounded-lg">
+                    <h3 class="font-bold text-xl mb-1 text-slate-800">Distorted Perception</h3>
+                    <p class="text-xs text-blue-600 font-bold uppercase">The Memoir & Film Foundation</p>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-2xl shadow-md border border-slate-100">
+                    <img src="questions_are_the_answers.JPG" alt="Critical Thinking Book" class="w-full h-80 object-cover shadow-xl mb-6 rounded-lg">
+                    <h3 class="font-bold text-xl mb-1 text-slate-800">Critical Thinking</h3>
+                    <p class="text-xs text-blue-600 font-bold uppercase">Socratic Methodology</p>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-2xl shadow-md border border-slate-100">
+                    <img src="Maryland.5728.jpg" alt="Notre Dame Maryland" class="w-full h-80 object-cover shadow-xl mb-6 rounded-lg">
+                    <h3 class="font-bold text-xl mb-1 text-slate-800">University Dialogue</h3>
+                    <p class="text-xs text-blue-600 font-bold uppercase">Notre Dame Maryland University</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="gradient-bg text-white py-24 px-6 text-center">
-        <h2 class="text-4xl font-bold mb-4 tracking-tighter uppercase hero-text">Request a Strategic Briefing</h2>
+        <h2 class="text-4xl font-bold mb-4 tracking-tighter uppercase">Request a Strategic Briefing</h2>
         <p class="text-blue-400 mb-12 text-xl font-medium uppercase tracking-widest">Direct Line for Leadership & Executive Engagement</p>
         
         <div class="flex flex-col md:flex-row justify-center items-center gap-10 mb-16">
-            <a href="mailto:axeldesarden@icloud.com" class="bg-blue-600 hover:bg-blue-500 text-white font-extrabold py-5 px-12 rounded-full shadow-2xl transition duration-300 uppercase tracking-widest text-sm">
-                Email Axel Directly
-            </a>
+            <span class="bg-blue-600 text-white font-extrabold py-5 px-12 rounded-full shadow-2xl uppercase tracking-widest text-sm">
+                axeldesarden@icloud.com
+            </span>
             <a href="tel:3477655676" class="border-2 border-blue-400 hover:bg-blue-500/10 text-white font-extrabold py-5 px-12 rounded-full transition duration-300 uppercase tracking-widest text-sm">
                 347-765-5676
             </a>
