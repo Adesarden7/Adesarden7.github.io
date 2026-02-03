@@ -7,21 +7,23 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
-        /* Mobile-First Header Adjustments */
-        .sticky-nav { transition: all 0.3s ease; height: 120px; }
+        /* Sticky Mini-Nav for Mobile Space Optimization */
+        .sticky-nav { transition: all 0.3s ease; }
         @media (max-width: 768px) {
-            .sticky-nav { height: 80px; padding: 0.5rem; }
-            .profile-img { width: 50px; height: 50px; }
-            .hero-title { font-size: 1.25rem; }
-            .hero-sub { font-size: 0.7rem; }
+            .sticky-nav { padding: 0.5rem 1rem; }
+            .profile-img { width: 45px !important; height: 45px !important; }
+            .hero-title { font-size: 1rem !important; }
+            .hero-sub { font-size: 0.6rem !important; }
         }
+        .animate-fade-in { animation: fadeIn 1s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans leading-relaxed">
 
-    <nav class="gradient-bg shadow-2xl text-white sticky top-0 z-50 sticky-nav flex items-center">
-        <div class="max-w-7xl mx-auto px-6 w-full flex items-center gap-4 md:gap-8">
-            <img src="Principal_Consultant_Liaison.jpg" alt="Axel Desarden" class="profile-img rounded-full border-2 border-blue-500 shadow-xl w-16 h-16 md:w-24 md:h-24 object-cover">
+    <nav class="gradient-bg shadow-2xl text-white sticky top-0 z-50 sticky-nav">
+        <div class="max-w-7xl mx-auto flex items-center gap-4 md:gap-8 p-3 md:p-5">
+            <img src="Principal_Consultant_Liaison.jpg" alt="Axel Desarden" class="profile-img rounded-full border-2 border-blue-500 shadow-xl w-14 h-14 md:w-24 md:h-24 object-cover">
             <div>
                 <h1 class="hero-title text-xl md:text-4xl font-bold tracking-tight uppercase">AXEL DESARDEN</h1>
                 <p class="hero-sub text-blue-400 font-semibold text-xs md:text-lg uppercase tracking-wide">Principal Consultant | BluejayPhenomenal Group</p>
@@ -29,59 +31,78 @@
         </div>
     </nav>
 
-    <section class="max-w-7xl mx-auto py-12 md:py-24 px-6">
+    <section class="max-w-7xl mx-auto py-12 md:py-20 px-6">
         <div class="grid lg:grid-cols-12 gap-12 items-start">
             
-            <div class="lg:col-span-7 space-y-10">
+            <div class="lg:col-span-7 space-y-10 animate-fade-in">
                 <div>
-                    <h2 class="text-4xl md:text-6xl font-black text-slate-800 border-b-8 border-blue-600 inline-block pb-2 uppercase tracking-tighter mb-6">Narrative Restoration</h2>
-                    <p class="text-xl md:text-2xl text-slate-700 leading-snug font-medium">
-                        Awareness isn't enough. As a <strong>seven-time gunshot survivor</strong>, I don't offer theories. I provide a visceral, cinematic intervention designed to disrupt <strong>Narrative Paralysis</strong> in high-stakes environments.
+                    <h2 class="text-4xl md:text-6xl font-black text-slate-800 border-b-8 border-blue-600 inline-block pb-2 uppercase tracking-tighter mb-8">Narrative Restoration</h2>
+                    <p class="text-xl md:text-2xl text-slate-700 leading-snug font-medium mb-6">
+                        As a <strong>seven-time gunshot survivor</strong> and executive leader, I provide high-performance academic and justice-impacted environments with the grounded perspective necessary to navigate <strong>Narrative Paralysis</strong>.
+                    </p>
+                    <p class="text-lg text-slate-600 leading-relaxed italic border-l-4 border-slate-300 pl-6">
+                        Real change isn't found in a lecture; it's found in the mirror. I leverage raw storytelling and cinematic immersion to disrupt destructive patterns and restore student agency.
                     </p>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-6 text-sm">
-                    <div class="border-l-4 border-blue-600 pl-4">
-                        <h4 class="font-bold uppercase text-blue-900">Clinical Precision</h4>
-                        <p class="text-slate-600">Using the Socratic Mirror Reflection method to audit student decision-making in real-time.</p>
+                <div class="grid md:grid-cols-2 gap-8 py-4">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-blue-600">
+                        <h4 class="font-black uppercase text-slate-800 tracking-wider mb-2">The Objective</h4>
+                        <p class="text-slate-600 text-sm">Moving individuals from reactive trauma responses to proactive leadership and self-governance.</p>
                     </div>
-                    <div class="border-l-4 border-blue-600 pl-4">
-                        <h4 class="font-bold uppercase text-blue-900">Institutional Safety</h4>
-                        <p class="text-slate-600">Frameworks vetted by Higher Ed and Juvenile Justice leadership to ensure scalable, low-risk impact.</p>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-blue-600">
+                        <h4 class="font-black uppercase text-slate-800 tracking-wider mb-2">The Methodology</h4>
+                        <p class="text-slate-600 text-sm">A multi-sensory approach combining high-end cinema, Socratic inquiry, and structured reflection sessions.</p>
                     </div>
                 </div>
 
-                <div class="flex items-center gap-5 p-8 bg-white shadow-2xl rounded-2xl border-l-[12px] border-blue-600 transform md:-rotate-1">
+                <div class="flex items-center gap-6 p-8 bg-white shadow-2xl rounded-2xl border-l-[12px] border-blue-600 transform hover:scale-[1.01] transition-all">
                     <img src="engagement.2.png" alt="Axel Desarden" class="w-20 h-20 rounded-full border-2 border-blue-100 shadow-sm object-cover">
-                    <p class="text-xl font-black italic text-blue-900 leading-tight">"The pen is in your hands — you have the power to write the next chapter."</p>
+                    <p class="text-xl md:text-2xl font-black italic text-blue-900 leading-tight">"The pen is in your hands — you have the power to write the next chapter."</p>
                 </div>
             </div>
             
-            <div class="lg:col-span-5 grid grid-cols-1 gap-4">
+            <div class="lg:col-span-5 flex flex-col gap-6">
                 <img src="bluejay-strategy-session.png" alt="Institutional Strategy" class="rounded-2xl shadow-xl border-2 border-white w-full">
+                
                 <div class="relative">
-                    <img src="engagement.2.png" alt="Live Engagement" class="rounded-2xl shadow-2xl border-4 border-white object-cover w-full h-[500px]">
-                    <div class="absolute bottom-4 left-4 bg-blue-600 text-white px-4 py-1 text-xs font-bold uppercase rounded">Live Session: Abington Senior High</div>
+                    <img src="engagement.2.png" alt="Transformation Session" class="rounded-2xl shadow-2xl border-4 border-white object-cover object-[center_20%] w-full h-[550px]">
                 </div>
-                <img src="principal-consultant-network.jpg" alt="Professional Networking" class="rounded-2xl shadow-lg border border-slate-200 w-full opacity-80 grayscale hover:grayscale-0 transition-all">
+
+                <img src="principal-consultant-network.jpg" alt="Professional Networking" class="rounded-2xl shadow-lg border border-slate-200 w-full grayscale opacity-80 hover:grayscale-0 transition-all duration-500">
             </div>
         </div>
     </section>
 
-    <footer class="gradient-bg text-white py-20 px-6 text-center">
-        <h2 class="text-4xl font-bold mb-4 uppercase tracking-tighter">Request a Strategic Briefing</h2>
+    <section class="py-20 bg-slate-100 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-slate-800 uppercase tracking-widest text-center">Evidence of Impact</h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <img src="abington.snr.hs.JPG" alt="Engagement Proof 1" class="rounded-2xl shadow-xl border border-white object-cover h-80 w-full">
+                <img src="abington.snr.hs.2..JPG" alt="Engagement Proof 2" class="rounded-2xl shadow-xl border border-white object-cover h-80 w-full">
+            </div>
+        </div>
+    </section>
+
+    <footer class="gradient-bg text-white py-24 px-6 text-center">
+        <h2 class="text-4xl font-bold mb-4 tracking-tighter uppercase hero-text">Request a Strategic Briefing</h2>
         <p class="text-blue-400 mb-12 text-xl font-medium uppercase tracking-widest">Direct Line for Leadership & Executive Engagement</p>
         
-        <div class="flex flex-col md:flex-row justify-center items-center gap-8">
-            <a href="mailto:axeldesarden@icloud.com" class="bg-blue-600 hover:bg-blue-500 text-white font-extrabold py-4 px-10 rounded-full shadow-2xl transition duration-300 uppercase tracking-widest text-sm">
+        <div class="flex flex-col md:flex-row justify-center items-center gap-10 mb-16">
+            <a href="mailto:axeldesarden@icloud.com" class="bg-blue-600 hover:bg-blue-500 text-white font-extrabold py-5 px-12 rounded-full shadow-2xl transition duration-300 uppercase tracking-widest text-sm">
                 Email Axel Directly
             </a>
-            <a href="tel:3477655676" class="border-2 border-blue-400 hover:bg-blue-500/10 text-white font-extrabold py-4 px-10 rounded-full transition duration-300 uppercase tracking-widest text-sm">
+            <a href="tel:3477655676" class="border-2 border-blue-400 hover:bg-blue-500/10 text-white font-extrabold py-5 px-12 rounded-full transition duration-300 uppercase tracking-widest text-sm">
                 347-765-5676
             </a>
         </div>
-        
-        <div class="mt-20 text-[10px] text-slate-500 uppercase tracking-[0.4em] font-bold opacity-50">
+
+        <div class="text-slate-400 space-y-3">
+            <p class="text-lg font-semibold text-white uppercase tracking-[0.3em]">Monroe County | New York City | Global</p>
+            <p class="opacity-70">axeldesarden@icloud.com</p>
+        </div>
+
+        <div class="mt-24 text-[11px] text-slate-500 uppercase tracking-[0.5em] font-bold opacity-40">
             &copy; 2026 BLUEJAYPHENOMENAL GROUP. ALL RIGHTS RESERVED.
         </div>
     </footer>
