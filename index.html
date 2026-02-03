@@ -7,19 +7,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
-        /* Slim Mobile Header Fix */
-        .sticky-nav { 
-            transition: all 0.3s ease; 
-            padding: 0.5rem 1rem;
-        }
+        .sticky-nav { transition: all 0.3s ease; padding: 0.4rem 1rem; }
         @media (max-width: 768px) {
-            .profile-img { width: 40px !important; height: 40px !important; }
-            .hero-title { font-size: 0.9rem !important; }
-            .hero-sub { font-size: 0.55rem !important; }
-            .sticky-nav { padding: 0.4rem 0.75rem; }
+            .profile-img { width: 35px !important; height: 35px !important; }
+            .hero-title { font-size: 0.85rem !important; }
+            .hero-sub { font-size: 0.5rem !important; }
+            .sticky-nav { padding: 0.3rem 0.6rem; }
         }
-        .animate-fade-in { animation: fadeIn 1s ease-in; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans leading-relaxed">
@@ -36,7 +30,7 @@
 
     <section class="max-w-7xl mx-auto py-8 md:py-20 px-6">
         <div class="grid lg:grid-cols-12 gap-12 items-start">
-            <div class="lg:col-span-7 space-y-10 animate-fade-in">
+            <div class="lg:col-span-7 space-y-10">
                 <div>
                     <h2 class="text-3xl md:text-6xl font-black text-slate-800 border-b-8 border-blue-600 inline-block pb-2 uppercase tracking-tighter mb-8">Narrative Restoration</h2>
                     
@@ -44,37 +38,45 @@
                         <p class="text-lg md:text-2xl text-blue-900 leading-snug font-semibold italic">
                             "In competitive academic environments, the greatest risk is <strong>Narrative Detachment</strong>. When students lose sight of the gravity of their choices, they begin to romanticize rebellion."
                         </p>
-                        <p class="mt-4 text-slate-700 text-sm md:text-lg">
-                            Axel Desarden provides a visceral, cinematic anchor that reconnects students to the reality of consequence—ensuring that the 'next chapter' they write is one of leadership, not liability.
-                        </p>
                     </div>
 
                     <p class="text-lg text-slate-700 leading-relaxed font-medium">
-                        As a <strong>seven-time gunshot survivor</strong> and executive leader, I provide grounded intervention for institutions navigating the complexities of student agency and social-emotional intelligence.
+                        As a <strong>seven-time gunshot survivor</strong> and executive leader, I provide grounded intervention for institutions navigating the complexities of student agency and social-emotional intelligence [cite: 2025-11-19].
                     </p>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-white p-5 rounded-xl shadow-sm border-t-4 border-blue-600">
-                        <h4 class="font-black uppercase text-slate-800 tracking-wider mb-2 text-xs">The Objective</h4>
-                        <p class="text-slate-600 text-xs">Moving individuals from reactive behavior to proactive leadership and self-governance.</p>
-                    </div>
-                    <div class="bg-white p-5 rounded-xl shadow-sm border-t-4 border-blue-600">
-                        <h4 class="font-black uppercase text-slate-800 tracking-wider mb-2 text-xs">The Methodology</h4>
-                        <p class="text-slate-600 text-xs">A multi-sensory approach combining high-end cinema, Socratic inquiry, and structured reflection sessions.</p>
-                    </div>
-                </div>
-
                 <div class="flex items-center gap-4 md:gap-6 p-6 md:p-8 bg-white shadow-2xl rounded-2xl border-l-[12px] border-blue-600">
-                    <img src="engagement.2.jpg" alt="Axel" class="w-14 h-14 md:w-20 md:h-20 rounded-full object-cover">
-                    <p class="text-lg md:text-2xl font-black italic text-blue-900 leading-tight">"The pen is in your hands — you have the power to write the next chapter."</p>
+                    <img src="engagement.2.jpg" alt="Axel Engagement" class="w-14 h-14 md:w-20 md:h-20 rounded-full object-cover">
+                    <p class="text-lg md:text-2xl font-black italic text-blue-900 leading-tight">"The pen is in your hands — you have the power to write the next chapter." [cite: 2025-11-19]</p>
                 </div>
             </div>
             
             <div class="lg:col-span-5 flex flex-col gap-6">
                 <img src="bluejay-strategy-session.png" alt="Strategy" class="rounded-2xl shadow-xl w-full">
-                <img src="engagement.2.jpg" alt="Transformation Session" class="rounded-2xl shadow-2xl border-4 border-white object-cover object-[center_20%] w-full h-[400px] md:h-[550px]">
-                <img src="principal-consultant-network.jpg" alt="Networking" class="rounded-2xl shadow-lg w-full grayscale opacity-80">
+                <img src="engagement.2.jpg" alt="Transformation Session" class="rounded-2xl shadow-2xl border-4 border-white object-cover w-full h-[400px] md:h-[550px]">
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-slate-900 py-20 px-6 text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div class="space-y-6">
+                    <h2 class="text-3xl font-bold uppercase tracking-widest text-blue-400">The Cinematic Catalyst</h2>
+                    <p class="text-xl font-semibold text-slate-200 border-l-4 border-blue-600 pl-4">The Calibration of Consequence</p>
+                    <p class="text-slate-300 leading-relaxed">
+                        The film <strong>"Distorted Perception of Innocence"</strong> serves as the visceral entry point for Narrative Restoration—disrupting theoretical assumptions and opening the door to a "surgical audit" of personal choices [cite: 2026-01-23, 2026-02-03]. 
+                    </p>
+                    <p class="text-slate-400 text-sm italic">
+                        By witnessing the finality of high-stakes errors from the safety of the screen, students gain the "narrative friction" required to weigh their own future decisions with absolute clarity [cite: 2026-02-03].
+                    </p>
+                </div>
+                <div class="flex justify-center">
+                    <img src="MoviePoster16x24Low-Res12mb (1).jpg" alt="Film Poster" class="rounded-lg shadow-2xl max-w-[280px] border-2 border-slate-700">
+                </div>
+            </div>
+            <div class="max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-800 bg-black">
+                <video controls muted class="w-full aspect-video"><source src="Cinematic_Catalyst_Overview.mp4"></video>
             </div>
         </div>
     </section>
@@ -83,57 +85,22 @@
         <div class="max-w-7xl mx-auto px-6 text-center">
             <h2 class="text-2xl font-bold mb-10 text-slate-800 uppercase tracking-widest">Evidence of Impact</h2>
             <div class="grid md:grid-cols-2 gap-8">
-                <img src="abington.snr.hs.JPG" alt="Proof 1" class="rounded-2xl shadow-lg h-64 md:h-80 w-full object-cover">
-                <img src="abington.snr.hs.2..JPG" alt="Proof 2" class="rounded-2xl shadow-lg h-64 md:h-80 w-full object-cover">
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-slate-900 py-20 px-6 text-white text-center md:text-left">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
-                <div>
-                    <h2 class="text-3xl font-bold mb-6 uppercase tracking-widest text-blue-400">The Cinematic Catalyst</h2>
-                    <p class="text-slate-300 leading-relaxed mb-6">The film <strong>"Distorted Perception of Innocence"</strong> serves as the visceral entry point for Narrative Restoration.</p>
-                </div>
-                <img src="MoviePoster16x24Low-Res12mb (1).jpg" alt="Poster" class="rounded-lg shadow-2xl max-w-[250px] mx-auto border-2 border-slate-700">
-            </div>
-            <div class="max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-800">
-                <video controls muted class="w-full aspect-video"><source src="Cinematic_Catalyst_Overview.mp4"></video>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-2xl font-bold mb-12 text-slate-800 uppercase tracking-widest">Published Frameworks</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm">
-                    <img src="dpi_book.JPG" class="w-full h-64 object-cover rounded-lg mb-4">
-                    <h3 class="font-bold text-slate-800 uppercase text-sm">Distorted Perception</h3>
-                </div>
-                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm">
-                    <img src="questions_are_the_answers.JPG" class="w-full h-64 object-cover rounded-lg mb-4">
-                    <h3 class="font-bold text-slate-800 uppercase text-sm">Critical Thinking</h3>
-                </div>
-                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm">
-                    <img src="Maryland.5728.jpg" class="w-full h-64 object-cover object-top rounded-lg mb-4">
-                    <h3 class="font-bold text-slate-800 uppercase text-sm">Higher Ed Dialogue</h3>
-                </div>
+                <img src="abington.snr.hs.JPG" alt="Impact 1" class="rounded-2xl shadow-lg h-64 md:h-80 w-full object-cover">
+                <img src="abington.snr.hs.2..JPG" alt="Impact 2" class="rounded-2xl shadow-lg h-64 md:h-80 w-full object-cover">
             </div>
         </div>
     </section>
 
     <footer class="gradient-bg text-white py-20 px-6 text-center">
-        <img src="BlueJay.Logo.png" alt="Bluejay Logo" class="w-32 h-auto mx-auto mb-6 shadow-xl">
-        <h2 class="text-2xl font-bold mb-4 uppercase">Request a Strategic Briefing</h2>
+        <img src="BlueJay.Logo.png" alt="Bluejay Phenomenal Group" class="w-32 h-auto mx-auto mb-6 shadow-xl">
+        <h2 class="text-2xl font-bold mb-2 uppercase">Request a Strategic Briefing</h2>
         <p class="text-blue-400 mb-10 text-sm uppercase tracking-widest">Executive Engagement Only</p>
         
         <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-12">
-            <span class="bg-blue-600 py-3 px-8 rounded-full text-xs font-bold uppercase">axeldesarden@icloud.com</span>
-            <a href="tel:3477655676" class="border border-blue-400 py-3 px-8 rounded-full text-xs font-bold uppercase">347-765-5676</a>
+            <span class="bg-blue-600 py-3 px-8 rounded-full text-xs font-bold uppercase tracking-widest">axeldesarden@icloud.com</span>
+            <a href="tel:3477655676" class="border border-blue-400 py-3 px-8 rounded-full text-xs font-bold uppercase tracking-widest">347-765-5676</a>
         </div>
-        <p class="text-xs text-slate-400 opacity-60 font-bold uppercase tracking-[0.4em]">&copy; 2026 BLUEJAYPHENOMENAL GROUP. ALL RIGHTS RESERVED.</p>
+        <p class="text-[10px] text-slate-400 opacity-60 font-bold uppercase tracking-[0.4em]">&copy; 2026 BLUEJAYPHENOMENAL GROUP. ALL RIGHTS RESERVED.</p>
     </footer>
 
 </body>
