@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Perspective Series | Axel Desarden</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        .hero-gradient { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('MoviePoster16x24Low-Res12mb (1).jpg'); background-size: cover; background-position: center; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans leading-relaxed">
 
+    <header class="hero-gradient h-screen flex items-center justify-center text-center text-white px-6">
+        <div class="max-w-3xl">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">Perspective is the only thing you can't buy.</h1>
+            <p class="text-xl md:text-2xl mb-8 opacity-90 font-light italic">A premium narrative experience for high-achieving student populations.</p>
+            <a href="#about" class="bg-white text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-blue-50 transition shadow-xl">Explore the Series</a>
+        </div>
+    </header>
+
+    <section id="about" class="py-24 px-6 max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-3xl font-bold mb-6 text-blue-900">Cultivating Radical Empathy</h2>
+                <p class="text-lg mb-6 text-slate-700">
+                    In elite academic environments, students often live within a curated bubble. <strong>The Perspective Series</strong> breaks that bubble, providing a visceral encounter with resilience, identity, and high-stakes decision-making.
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <span class="text-blue-600 mr-3 text-xl">✓</span>
+                        <p><strong>Narrative Entry:</strong> Using cinema to bypass defense mechanisms.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="text-blue-600 mr-3 text-xl">✓</span>
+                        <p><strong>The Mirror Reflection:</strong> A proprietary methodology for identity building.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-2xl">
+                <img src="connection.jpg" alt="Engagement" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-blue-900 py-20 text-center text-white">
+        <div class="max-w-2xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-4">Ready to bring perspective to your institution?</h2>
+            <p class="mb-10 opacity-80">Download the full Executive Summary & Student Experience Syllabus below.</p>
+            <a href="The_Perspective_Series_Syllabus.pdf" target="_blank" class="inline-block bg-blue-500 hover:bg-blue-400 text-white px-10 py-5 rounded-lg font-bold text-lg transition shadow-lg">
+                Download the Syllabus (PDF)
+            </a>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 max-w-4xl mx-auto text-center">
+        <img src="Principal_Consultant_Liaison.jpg" alt="Axel Desarden" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-white shadow-lg">
+        <h3 class="text-2xl font-bold mb-2 text-blue-900">Axel Desarden</h3>
+        <p class="text-blue-600 font-medium mb-4 italic text-lg">Principal Consultant & Filmmaker</p>
+        <p class="text-slate-600">
+            A seven-time gunshot survivor turned strategist, Axel Desarden bridges the gap between lived experience and institutional transformation. He empowers students to write their next chapter with intention.
+        </p>
+    </section>
+
+    <footer class="py-10 text-center text-slate-400 text-sm border-t border-slate-200">
+        &copy; 2026 BlueJay Phenomenal Group. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
