@@ -2,69 +2,99 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Axel Desarden - Institutional Brief</title>
+    <title>Axel Desarden - Institutional Impact Brief</title>
     <style>
         @page { size: letter landscape; margin: 0; }
-        body { margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #222; }
-        .wrapper { display: flex; width: 11in; height: 8.5in; background: #fff; }
-        .panel { width: 33.33%; padding: 0.4in; box-sizing: border-box; border-right: 1px solid #eee; display: flex; flex-direction: column; position: relative; }
-        .panel:last-child { border-right: none; background-color: #fcfcfc; }
+        body { margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #1a1a1a; background: #fff; }
+        .wrapper { display: flex; width: 11in; height: 8.5in; }
+        .panel { width: 33.33%; padding: 0.5in; box-sizing: border-box; border-right: 2px solid #eee; display: flex; flex-direction: column; }
+        .panel:last-child { border-right: none; }
+
+        /* Color Palette from Justice Site */
+        .red-text { color: #d32f2f; }
+        .bg-dark { background-color: #1a1a1a; color: #ffffff; }
         
         /* Typography */
-        h1 { font-size: 22pt; margin: 0 0 8pt 0; color: #000; text-transform: uppercase; border-bottom: 4px solid #d32f2f; display: inline-block; }
-        h2 { font-size: 12pt; color: #d32f2f; margin: 12pt 0 5pt 0; text-transform: uppercase; letter-spacing: 1.5px; font-weight: bold; }
-        p { font-size: 9.5pt; line-height: 1.5; margin-bottom: 8pt; }
-        
-        /* Images */
-        .headshot { width: 100%; height: 2.6in; object-fit: cover; border-radius: 4px; margin-bottom: 10pt; border: 1px solid #ddd; }
-        .action-img { width: 100%; height: 1.8in; object-fit: cover; margin: 10pt 0; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        .logo { width: 110px; margin-bottom: 10pt; }
+        h1 { font-size: 26pt; margin: 0; line-height: 1.1; text-transform: uppercase; border-bottom: 5px solid #d32f2f; padding-bottom: 10px; }
+        h2 { font-size: 14pt; color: #d32f2f; margin: 20pt 0 10pt 0; text-transform: uppercase; letter-spacing: 2px; font-weight: 900; }
+        h3 { font-size: 11pt; margin: 12pt 0 5pt 0; text-transform: uppercase; color: #333; }
+        p { font-size: 11pt; line-height: 1.6; margin-bottom: 12pt; }
+        ul { padding-left: 18px; margin: 0; }
+        li { font-size: 10.5pt; line-height: 1.5; margin-bottom: 8pt; }
 
-        /* Institutional Accents */
-        .institutional-box { background: #1a1a1a; color: white; padding: 12pt; border-left: 5px solid #d32f2f; margin: 10pt 0; font-size: 9pt; }
-        .institutional-box b { color: #d32f2f; text-transform: uppercase; font-size: 8pt; }
-        .tagline { font-weight: bold; font-style: italic; color: #d32f2f; margin-top: auto; padding-top: 10pt; font-size: 10pt; }
-        .link-style { color: #d32f2f; text-decoration: none; font-weight: bold; font-size: 9pt; display: block; margin-top: 5pt; }
+        /* Images - Adjusted for no cropping */
+        .img-container { width: 100%; overflow: hidden; border-radius: 4px; border: 1px solid #ddd; margin-bottom: 15pt; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .headshot { width: 100%; height: 3in; object-fit: contain; background: #f9f9f9; }
+        .poster { width: 100%; height: 2.5in; object-fit: contain; background: #000; }
+        .action-img { width: 100%; height: 2in; object-fit: contain; background: #f4f4f4; }
+        .logo { width: 130px; margin-bottom: 15pt; }
+
+        /* Institutional Boxes */
+        .brief-box { background: #f4f4f4; padding: 15pt; border-left: 6px solid #d32f2f; margin: 15pt 0; }
+        .brief-box b { font-size: 10pt; color: #d32f2f; text-transform: uppercase; }
+        .footer-tag { font-weight: bold; font-style: italic; color: #d32f2f; margin-top: auto; font-size: 12pt; text-align: center; }
     </style>
 </head>
 <body>
     <div class="wrapper">
-        <div class="panel">
-            <h2>The Need</h2>
-            <h1>Responsivity</h1>
-            <p>Traditional interventions often fail due to a lack of <b>General Responsivity</b>. My methodology bridges the gap between secure facility mandates and youth receptivity.</p>
-            
-            <img src="response.2.jpg" class="action-img" alt="Youth Response Session">
-            
-            <div class="institutional-box">
-                <b>RNR Framework Integration:</b><br>
-                Targeting dynamic risk factors through Cognitive Behavioral Intervention (CBI) techniques and proximity-based mentorship.
+        <div class="panel bg-dark" style="border-right-color: #333;">
+            <img src="BlueJay.Logo.png" class="logo" alt="Logo">
+            <div class="img-container" style="border:none;">
+                <img src="Principal_Consultant_Liaison.jpg" class="headshot" style="height: 3.5in;" alt="Axel Desarden">
             </div>
-            <p style="font-size: 8.5pt;"><i>"Transforming passive observation into active behavioral change."</i></p>
+            <h2 style="color: #fff; margin-bottom: 0;">Principal Consultant</h2>
+            <h1 style="color: #fff; border-bottom-color: #fff; font-size: 34pt;">Axel<br>Desarden</h1>
+            
+            <div class="brief-box" style="background: #333; color: #fff; border-left-color: #fff;">
+                <b>Strategic Credentials</b>
+                <ul style="margin-top: 5pt; font-size: 9.5pt;">
+                    <li>Seven-Time Gunshot Survivor (Lived Experience Anchor)</li>
+                    <li>Justice-Impacted Filmmaker, Author, & Screenwriter</li>
+                    <li>Certified Life Coach & Youth Transformation Expert</li>
+                    <li>Institutional Strategist for Justice-Impacted Populations</li>
+                </ul>
+            </div>
         </div>
 
         <div class="panel">
-            <h2>Framework</h2>
-            <h1>MRR Method</h1>
-            <p><b>Mirror Reflection & Response (MRR)</b> is a three-tier intervention loop designed for high-risk populations.</p>
+            <h2>The Methodology</h2>
+            <h1>Mirror Reflection & Response</h1>
+            <p>The <b>Mirror Reflection & Response (MRR)</b> Methodology is a premium, evidence-based intervention designed to navigate institutional risk while maximizing youth transformation.</p>
             
-            <p><b>Tier 1: Cinematic Entry</b><br>Establish rapport and de-escalate institutional resistance through narrative storytelling.</p>
-            
-            <p><b>Tier 2: Mirror Reflection</b><br>Guided sessions where youth identify triggers and "Mirror Selves".</p>
-            
-            <p><b>Tier 3: Response & Action</b><br>Prosocial goal setting and "Next Chapter" drafting for community reentry.</p>
-            
-            <div class="tagline">"The pen is in your hands."</div>
+            <h3>The 3-Tier Intervention Loop:</h3>
+            <ul>
+                <li><b>Tier 1: Cinematic Entry Point</b> – Utilizing high-production film to establish immediate rapport, de-escalate resistance, and create a shared narrative framework.</li>
+                <li><b>Tier 2: Guided Mirror Reflection</b> – A deep-dive session where youth identify their "Mirror Self," analyzing dynamic risk factors and criminogenic triggers in a safe environment.</li>
+                <li><b>Tier 3: Response & Action Dialogue</b> – Moving from thought to behavior. Youth engage in prosocial modeling and draft their "Next Chapter" for reentry success.</li>
+            </ul>
+
+            <img src="response.2.jpg" class="action-img" alt="Response Session">
+            <div class="footer-tag">"Writing for Impact. Speaking for Change."</div>
         </div>
 
-        <div class="panel" style="text-align: center;">
-            <img src="BlueJay.Logo.png" class="logo" style="margin: 0 auto 10pt auto;" alt="Logo">
-            <img src="Principal_Consultant_Liaison.jpg" class="headshot" alt="Axel Desarden">
+        <div class="panel">
+            <h2>Institutional Alignment</h2>
+            <h1>Evidence-Based Outcomes</h1>
             
-            <h2 style="margin-top: 0;">Principal Consultant</h2>
-            <h1 style="border:none; font-size: 28pt; margin: 0;">Axel<br>Desarden</h1>
-            
-            <div class="institutional-box" style="text-align: left; background: #f4f4f4; color: #333;">
-                <b>Strategic Credentials:</b><br>
-                • 7-Time Gunshot Survivor<br>
-                • Certified Life Coach & Mentor
+            <img src="MoviePoster16x24Low-Res12mb (1).jpg" class="poster" alt="Movie Poster">
+
+            <div class="brief-box">
+                <b>DCJS & RNR Framework Integration</b>
+                <p style="font-size: 10pt; margin: 5pt 0;">Addressing the <b>Risk-Need-Responsivity (RNR)</b> model by providing high-responsivity programming that targets antisocial cognitions and improves social skills.</p>
+            </div>
+
+            <h3>Key Institutional Benefits:</h3>
+            <ul>
+                <li><b>CBI Support:</b> Complements Cognitive Behavioral Interventions through narrative-driven restructuring.</li>
+                <li><b>Recidivism Reduction:</b> Focuses on the "Responsivity" factor often missing in secure facilities.</li>
+                <li><b>Optics & Credibility:</b> Delivers a premium, measurable experience that makes decision-makers look effective internally and externally.</li>
+            </ul>
+
+            <p style="font-size: 10pt; margin-top: auto; border-top: 1px solid #ddd; padding-top: 10pt;">
+                <b>Direct Link to Full Curriculum:</b><br>
+                <a href="https://adesarden7.github.io/justice" style="color:#d32f2f; text-decoration:none; font-weight:bold;">adesarden7.github.io/justice</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
