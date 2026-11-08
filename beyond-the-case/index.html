@@ -59,6 +59,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
+        /* Custom Styles & Editorial Polish */
         body {
             font-family: 'Inter', sans-serif;
             background-color: #060D17;
@@ -79,6 +80,10 @@
             -webkit-text-fill-color: transparent;
         }
 
+        .gold-border-gradient {
+            border-image: linear-gradient(135deg, #C5A059, #4A6FA5) 1;
+        }
+
         .glass-card {
             background: rgba(13, 31, 60, 0.6);
             backdrop-filter: blur(12px);
@@ -95,8 +100,33 @@
             box-shadow: 0 12px 30px -10px rgba(10, 25, 47, 0.8), 0 0 20px 0 rgba(197, 160, 89, 0.1);
         }
 
+        /* Modal Overlay */
         .modal-blur {
             backdrop-filter: blur(8px);
+        }
+
+        /* Timeline Connector */
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 24px;
+            width: 2px;
+            background: linear-gradient(180deg, #C5A059 0%, #4A6FA5 100%);
+        }
+        @media (min-width: 768px) {
+            .timeline-line::before {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Tab Code Editor Styles */
+        .tab-btn.active {
+            border-bottom: 2px solid #C5A059;
+            color: #C5A059;
+            background-color: rgba(197, 160, 89, 0.05);
         }
     </style>
 </head>
@@ -138,8 +168,11 @@
                     <a href="#vendor-profile" class="px-3 py-2 text-slate-300 hover:text-gold-400 transition-colors">06. Vendor Profile</a>
                 </div>
 
-                <!-- Call to Action -->
+                <!-- Call to Action & Export Toggle -->
                 <div class="hidden md:flex items-center gap-3">
+                    <button onclick="openTabModal()" class="text-xs uppercase tracking-wider px-3 py-2 text-steel-300 hover:text-white border border-slate-700 rounded transition">
+                        <i class="fa-solid fa-code mr-1.5"></i> View Files
+                    </button>
                     <button onclick="openModal()" class="px-4 py-2 text-xs font-semibold uppercase tracking-wider text-navy-900 bg-gold-500 hover:bg-gold-400 rounded transition shadow-lg shadow-gold-500/10">
                         Discuss Paid Pilot
                     </button>
@@ -165,9 +198,12 @@
             <a href="#opportunities" onclick="closeMobileMenu()" class="block px-3 py-2 text-slate-300 hover:text-gold-400">04 — Complementary Offerings</a>
             <a href="#practitioner" onclick="closeMobileMenu()" class="block px-3 py-2 text-slate-300 hover:text-gold-400">05 — About Axel Desarden</a>
             <a href="#vendor-profile" onclick="closeMobileMenu()" class="block px-3 py-2 text-slate-300 hover:text-gold-400">06 — Government Vendor Profile</a>
-            <div class="pt-2">
+            <div class="pt-2 flex flex-col gap-2">
                 <button onclick="openModal(); closeMobileMenu();" class="w-full text-center py-2 text-xs font-semibold uppercase tracking-wider text-navy-900 bg-gold-500 rounded">
                     Discuss Proposed Paid Pilot
+                </button>
+                <button onclick="openTabModal(); closeMobileMenu();" class="w-full text-center py-2 text-xs font-medium text-steel-300 border border-slate-700 rounded">
+                    View Complete Source Code & README
                 </button>
             </div>
         </div>
@@ -175,11 +211,13 @@
 
     <!-- HERO / SECTION 01: THE ALIGNMENT -->
     <section id="alignment" class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden border-b border-slate-800/60">
+        <!-- Subtle Glow Backgrounds -->
         <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-navy-700/20 rounded-full blur-3xl pointer-events-none"></div>
         <div class="absolute top-1/3 right-10 w-[300px] h-[300px] bg-gold-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
+            <!-- Target Audience Header Badge -->
             <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-navy-700/60 border border-gold-500/30 text-gold-400 text-xs font-medium mb-6">
                 <span class="w-2 h-2 rounded-full bg-gold-500 animate-pulse"></span>
                 <span>Targeted Professional Collaboration Proposal | Prepared for The Gault Center</span>
@@ -281,73 +319,47 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
                     
+                    <!-- Segment 1 -->
                     <div class="glass-card glass-card-hover rounded-lg p-6 relative">
                         <div class="text-xs font-bold text-gold-400 uppercase tracking-widest mb-1">Segment 01</div>
                         <div class="text-sm font-semibold text-white mb-2">Opening & Learning Context</div>
                         <div class="inline-block px-2 py-1 bg-navy-900 rounded text-[11px] font-mono text-steel-300 mb-4">5–10 Minutes</div>
                         <p class="text-xs text-slate-300 leading-relaxed">
-                            Sets psychological safety parameters, frames goals around meaningful youth participation, and establishes lived-experience context.
+                            Sets the psychological safety parameters, frames goals around meaningful youth participation, and establishes the lived-experience context.
                         </p>
                     </div>
 
+                    <!-- Segment 2 -->
                     <div class="glass-card glass-card-hover rounded-lg p-6 relative border-gold-500/40">
                         <div class="text-xs font-bold text-gold-400 uppercase tracking-widest mb-1">Segment 02</div>
                         <div class="text-sm font-semibold text-white mb-2">Narrative Case Study Catalyst</div>
                         <div class="inline-block px-2 py-1 bg-navy-900 rounded text-[11px] font-mono text-gold-400 mb-4">40 Minutes</div>
                         <p class="text-xs text-slate-300 leading-relaxed mb-3">
-                            Screening of the cinematic narrative <em>Distorted Perception of Innocence</em>, serving as a shared experiential foundation.
+                            Screening of the cinematic narrative <em>Distorted Perception of Innocence</em>, serving as a shared experiential foundation rather than the standalone service.
                         </p>
                         <span class="text-[10px] text-steel-400 italic block">Cinematic catalyst for reflection</span>
                     </div>
 
+                    <!-- Segment 3 -->
                     <div class="glass-card glass-card-hover rounded-lg p-6 relative">
                         <div class="text-xs font-bold text-gold-400 uppercase tracking-widest mb-1">Segment 03</div>
                         <div class="text-sm font-semibold text-white mb-2">Facilitated MRR Reflection</div>
                         <div class="inline-block px-2 py-1 bg-navy-900 rounded text-[11px] font-mono text-steel-300 mb-4">20–25 Minutes</div>
                         <p class="text-xs text-slate-300 leading-relaxed">
-                            Guided engagement using the proprietary Mirror Reflection & Response (MRR) framework to unpack perceptions and story assumptions.
+                            Guided engagement using the proprietary Mirror Reflection & Response (MRR) framework to unpack perceptions, story assumptions, and power dynamics.
                         </p>
                     </div>
 
+                    <!-- Segment 4 -->
                     <div class="glass-card glass-card-hover rounded-lg p-6 relative">
                         <div class="text-xs font-bold text-gold-400 uppercase tracking-widest mb-1">Segment 04</div>
                         <div class="text-sm font-semibold text-white mb-2">Professional Application</div>
                         <div class="inline-block px-2 py-1 bg-navy-900 rounded text-[11px] font-mono text-steel-300 mb-4">10–15 Minutes</div>
                         <p class="text-xs text-slate-300 leading-relaxed">
-                            Translating insights into actionable, intentional practices for client-centered interviewing and trust-building.
+                            Translating insights into actionable, intentional practices for client-centered interviewing, trust-building, and youth-led defense strategy.
                         </p>
                     </div>
 
-                </div>
-            </div>
-
-            <!-- YouTube Video Carousel Integration -->
-            <div class="mb-16">
-                <h3 class="text-sm font-semibold uppercase tracking-wider text-gold-400 mb-4 flex items-center gap-2">
-                    <i class="fa-solid fa-film"></i> Experiential Workshop Preview & Visual Demonstration
-                </h3>
-                <p class="text-xs text-slate-400 mb-6">
-                    The video walkthrough below illustrates the dynamic facilitation style and interactive small-group environment utilized during narrative-based professional learning labs.
-                </p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="glass-card rounded-xl p-4 overflow-hidden">
-                        <div class="aspect-w-16 aspect-h-9 bg-navy-900 rounded-lg overflow-hidden relative">
-                            <iframe class="w-full h-48 rounded" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrAXtmErZgOdI_8GAKxUWu-jE0sT4sA8q" title="Facilitation Demonstration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <p class="text-xs text-slate-300 mt-3 font-medium">Interactive Facilitation & Group Reflection Walkthrough</p>
-                    </div>
-                    <div class="glass-card rounded-xl p-4 overflow-hidden">
-                        <div class="aspect-w-16 aspect-h-9 bg-navy-900 rounded-lg overflow-hidden relative">
-                            <iframe class="w-full h-48 rounded" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrAXtmErZgOdI_8GAKxUWu-jE0sT4sA8q" title="Youth Advocacy Discussion" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <p class="text-xs text-slate-300 mt-3 font-medium">Narrative Responsivity in Legal Practice</p>
-                    </div>
-                    <div class="glass-card rounded-xl p-4 overflow-hidden">
-                        <div class="aspect-w-16 aspect-h-9 bg-navy-900 rounded-lg overflow-hidden relative">
-                            <iframe class="w-full h-48 rounded" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrAXtmErZgOdI_8GAKxUWu-jE0sT4sA8q" title="Reflective Practice Seminar" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <p class="text-xs text-slate-300 mt-3 font-medium">Translating Lived Experience into Professional Growth</p>
-                    </div>
                 </div>
             </div>
 
@@ -401,7 +413,7 @@
         </div>
     </section>
 
-    <!-- SECTION 03: THE MRR METHODOLOGY -->
+    <!-- SECTION 03: THE MRR METHODOLOGY (INTERACTIVE DIAGRAM) -->
     <section id="methodology" class="py-20 relative border-b border-slate-800/60">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
@@ -488,6 +500,7 @@
 
             </div>
 
+            <!-- Interconnection Banner -->
             <div class="mt-12 bg-navy-800/60 p-6 rounded-lg border border-slate-800 text-center max-w-4xl mx-auto">
                 <p class="text-xs text-slate-300 leading-relaxed">
                     <strong class="text-gold-400">Iterative Reflection Cycle:</strong> The MRR framework is non-linear; it provides practitioners with an ongoing internal dialogue tool that can be re-applied across all stages of client representation.
@@ -509,33 +522,36 @@
                     </h2>
                 </div>
                 <p class="text-xs text-steel-400 mt-2 md:mt-0 max-w-md">
-                    Targeted secondary formats designed to integrate seamlessly into ongoing professional development initiatives.
+                    Secondary modular offerings designed to fit broader conference agendas, staff retreats, or training series.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 
-                <div class="glass-card rounded-lg p-6">
-                    <div class="text-gold-400 font-mono text-sm mb-3">01</div>
-                    <h3 class="text-base font-bold text-white mb-2">Professional Development Breakout Sessions</h3>
-                    <p class="text-xs text-slate-300 leading-relaxed">
-                        Shorter MRR-focused breakout modules tailored for inclusion in existing defender conferences, regional trainings, and symposia.
+                <!-- Opportunity 1 -->
+                <div class="bg-navy-900/60 p-6 rounded-lg border border-slate-800 hover:border-slate-700 transition">
+                    <div class="text-xs font-mono text-gold-400 mb-2">Option A</div>
+                    <h3 class="text-base font-semibold text-white mb-2">PD Breakout Sessions</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Tailored 45–60 minute interactive breakout sessions integrated directly into national or regional defender conferences.
                     </p>
                 </div>
 
-                <div class="glass-card rounded-lg p-6">
-                    <div class="text-gold-400 font-mono text-sm mb-3">02</div>
-                    <h3 class="text-base font-bold text-white mb-2">Narrative-Based Reflection Workshops</h3>
-                    <p class="text-xs text-slate-300 leading-relaxed">
-                        Facilitated sessions dedicated to unpacking perception, implicit bias in case framing, and the importance of active listening to lived experience.
+                <!-- Opportunity 2 -->
+                <div class="bg-navy-900/60 p-6 rounded-lg border border-slate-800 hover:border-slate-700 transition">
+                    <div class="text-xs font-mono text-gold-400 mb-2">Option B</div>
+                    <h3 class="text-base font-semibold text-white mb-2">Reflection Workshops</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        In-depth half-day narrative workshops for defender offices seeking focused team alignment and reflective practice routines.
                     </p>
                 </div>
 
-                <div class="glass-card rounded-lg p-6">
-                    <div class="text-gold-400 font-mono text-sm mb-3">03</div>
-                    <h3 class="text-base font-bold text-white mb-2">Modular MRR Learning Experiences</h3>
-                    <p class="text-xs text-slate-300 leading-relaxed">
-                        Individual methodology components (Mirror, Pen, Mic, or Vision) adapted to complement specific training objectives within ongoing programs.
+                <!-- Opportunity 3 -->
+                <div class="bg-navy-900/60 p-6 rounded-lg border border-slate-800 hover:border-slate-700 transition">
+                    <div class="text-xs font-mono text-gold-400 mb-2">Option C</div>
+                    <h3 class="text-base font-semibold text-white mb-2">Modular MRR Modules</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Custom integration of specific MRR reflection components into established core defense curriculum and onboarding programs.
                     </p>
                 </div>
 
@@ -544,187 +560,183 @@
         </div>
     </section>
 
-    <!-- SECTION 05: PRACTITIONER PROFILE -->
+    <!-- SECTION 05: ABOUT THE PRACTITIONER -->
     <section id="practitioner" class="py-20 relative border-b border-slate-800/60">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <div class="max-w-3xl mb-12">
-                <span class="text-xs font-bold uppercase tracking-widest text-gold-400">05 — Practitioner Profile</span>
-                <h2 class="display-font text-2xl sm:text-3xl lg:text-4xl font-bold text-white mt-2 mb-4">
-                    About the Practitioner
-                </h2>
-                <p class="editorial-font text-lg text-slate-300">
-                    Grounded expertise combining lived experience, rigorous professional facilitation, and organizational leadership.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- Headshot & Credentials Box -->
-                <div class="lg:col-span-4">
-                    <div class="glass-card rounded-xl p-6 text-center">
-                        <div class="w-48 h-48 sm:w-56 sm:h-56 mx-auto rounded-full overflow-hidden border-2 border-gold-500/40 mb-6 shadow-xl relative">
-                            <img src="assets/Principal_Consultant_Liaison.jpg" alt="Axel Desarden - Principal Consultant" class="w-full h-full object-cover">
+                <!-- Headshot Column -->
+                <div class="lg:col-span-4 flex justify-center">
+                    <div class="relative w-48 sm:w-56 mx-auto">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-gold-500 to-steel-500 rounded-full blur opacity-30"></div>
+                        <div class="relative bg-navy-800 rounded-full p-1.5 border border-slate-700 shadow-xl overflow-hidden">
+                            <img src="assets/Principal_Consultant_Liaison.jpg" 
+                                 alt="Axel Desarden, PC, CLC" 
+                                 onerror="this.src='https://placehold.co/400x400/0A192F/C5A059?text=Axel+Desarden'"
+                                 class="w-full h-48 sm:h-56 object-cover object-top rounded-full filter contrast-[1.05]">
                         </div>
-                        
-                        <h3 class="display-font text-lg font-bold text-white">AXEL DESARDEN, PC, CLC</h3>
-                        <p class="text-xs text-gold-400 font-semibold tracking-wider mt-1">Principal Consultant | BlueJay Phenomenal Group, LLC</p>
-                        
-                        <div class="mt-6 pt-6 border-t border-slate-800 text-left space-y-2 text-xs text-slate-300">
-                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-400"></i><span>Certified Life Coach & Professional Consultant</span></div>
-                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-400"></i><span>Author of 10 Self-Published Books</span></div>
-                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-400"></i><span>Screenwriter & Filmmaker</span></div>
-                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-400"></i><span>Alternative-to-Incarceration Practitioner</span></div>
+                        <div class="mt-4 text-center">
+                            <div class="text-sm font-bold text-white">Axel Desarden, PC, CLC</div>
+                            <div class="text-[11px] text-gold-400 font-medium">Principal Consultant | BlueJay Phenomenal Group, LLC</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Professional Biography -->
-                <div class="lg:col-span-8 space-y-6 text-sm text-slate-300 leading-relaxed">
-                    <p class="editorial-font text-xl text-slate-200">
-                        Axel Desarden brings more than three decades of lived and professional experience spanning alternative-to-incarceration programming, organizational leadership, youth mentorship, and behavioral intervention.
-                    </p>
-                    
-                    <p>
-                        As Founder and Principal Consultant of BlueJay Phenomenal Group, LLC, Axel specializes in designing narrative-based experiential learning frameworks that bridge personal history and professional practice. His work is grounded in the understanding that meaningful institutional reform requires engaging both systemic structures and the human narratives that animate them.
-                    </p>
+                <!-- Bio & Credentials Column -->
+                <div class="lg:col-span-8">
+                    <span class="text-xs font-bold uppercase tracking-widest text-gold-400">05 — Professional Profile</span>
+                    <h2 class="display-font text-2xl sm:text-3xl font-bold text-white mt-2 mb-6">
+                        About the Facilitator & Practitioner
+                    </h2>
 
-                    <p>
-                        He is the creator of the <strong>Mirror Reflection & Response (MRR) Methodology</strong>, a structured, reflective framework aligned with Cognitive Behavioral Intervention (CBI) principles and Risk-Need-Responsivity (RNR) awareness. Through books, documentary filmmaking, and facilitated workshops, Axel translates complex personal history into accessible, actionable tools for professional self-examination.
-                    </p>
-
-                    <div class="bg-navy-800/50 p-5 rounded-lg border border-slate-800 mt-6">
-                        <h4 class="text-xs font-semibold text-gold-400 uppercase tracking-wider mb-2">Professional Boundaries & Scope</h4>
-                        <p class="text-xs text-slate-400 leading-relaxed">
-                            Axel operates strictly as an independent experiential learning facilitator and curriculum developer. He does not provide legal representation, clinical diagnosis, psychological counseling, or formal academic instruction, ensuring his offerings serve as a clean, complementary catalyst for professional growth.
+                    <div class="editorial-font text-lg text-slate-300 leading-relaxed space-y-4 mb-8">
+                        <p>
+                            <strong>Axel Desarden</strong> brings a grounded, structured perspective to professional learning, combining extensive operational experience in alternative-to-incarceration (ATI) programming with lived-experience facilitation.
                         </p>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Professional Experience & Facilitation Photographic Evidence -->
-            <div class="mt-20 pt-16 border-t border-slate-800">
-                <div class="max-w-3xl mb-10">
-                    <span class="text-xs font-bold uppercase tracking-widest text-gold-400">Visual Evidence & Engagement</span>
-                    <h3 class="display-font text-xl sm:text-2xl font-bold text-white mt-1">
-                        Professional Experience & Facilitation
-                    </h3>
-                    <p class="text-xs text-slate-400 mt-1">
-                        Documenting actual educational workshops, institutional presentations, and interactive group facilitation sessions.
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Photo 1: Abington Senior High School -->
-                    <div class="glass-card rounded-xl overflow-hidden p-4">
-                        <div class="rounded-lg overflow-hidden mb-4 bg-navy-900 border border-slate-800 h-64 sm:h-72">
-                            <img src="assets/abington.snr.hs.JPG" alt="Abington Senior High School Engagement" class="w-full h-full object-cover">
-                        </div>
-                        <h4 class="text-sm font-bold text-white mb-1">Abington Senior High School Engagement</h4>
-                        <p class="text-xs text-slate-400 leading-relaxed">
-                            Facilitating interactive student discussions and reflective dialogue on narrative, identity, and personal agency.
+                        <p class="text-base text-slate-400">
+                            As a Certified Life Coach, curriculum developer, author of 10 published books, and filmmaker, Axel focuses on how human stories can bridge gaps between institutional protocols and human understanding.
                         </p>
                     </div>
 
-                    <!-- Photo 2: Group Facilitation -->
-                    <div class="glass-card rounded-xl overflow-hidden p-4">
-                        <div class="rounded-lg overflow-hidden mb-4 bg-navy-900 border border-slate-800 h-64 sm:h-72">
-                            <img src="assets/group.jpg" alt="Group Facilitation and Interactive Workshop" class="w-full h-full object-cover">
+                    <!-- Credential Tags -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-slate-800">
+                        <div class="flex items-start gap-3">
+                            <div class="p-2 bg-navy-800 rounded text-gold-400"><i class="fa-solid fa-certificate text-sm"></i></div>
+                            <div>
+                                <h4 class="text-xs font-semibold text-white uppercase">Certified Professional</h4>
+                                <p class="text-[11px] text-slate-400">Certified Life Coach (CLC) & Professional Consultant</p>
+                            </div>
                         </div>
-                        <h4 class="text-sm font-bold text-white mb-1">Group Facilitation & Interactive Session</h4>
-                        <p class="text-xs text-slate-400 leading-relaxed">
-                            Guiding professional development participants through structured MRR reflection exercises and narrative unpacking.
+
+                        <div class="flex items-start gap-3">
+                            <div class="p-2 bg-navy-800 rounded text-gold-400"><i class="fa-solid fa-book-open text-sm"></i></div>
+                            <div>
+                                <h4 class="text-xs font-semibold text-white uppercase">Author & Developer</h4>
+                                <p class="text-[11px] text-slate-400">Author of 10 books; curriculum designer</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="p-2 bg-navy-800 rounded text-gold-400"><i class="fa-solid fa-film text-sm"></i></div>
+                            <div>
+                                <h4 class="text-xs font-semibold text-white uppercase">Filmmaker & Writer</h4>
+                                <p class="text-[11px] text-slate-400">Creator of <em>Distorted Perception of Innocence</em></p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="p-2 bg-navy-800 rounded text-gold-400"><i class="fa-solid fa-hands-holding text-sm"></i></div>
+                            <div>
+                                <h4 class="text-xs font-semibold text-white uppercase">ATI Experience</h4>
+                                <p class="text-[11px] text-slate-400">Alternative-to-Incarceration operations background</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 bg-navy-900/60 p-4 rounded border border-slate-800">
+                        <p class="text-xs text-slate-400 italic">
+                            "Positioned strictly as a professional practitioner bringing structured lived-experience reflection to learning environments, not as a legal instructor or clinical therapist."
                         </p>
                     </div>
+
                 </div>
+
             </div>
 
         </div>
     </section>
 
-    <!-- SECTION 06: GOVERNMENT & STATE VENDOR PROFILE -->
+    <!-- SECTION 06: GOVERNMENT & INSTITUTIONAL VENDOR PROFILE -->
     <section id="vendor-profile" class="py-20 bg-navy-800/40 relative border-b border-slate-800/60">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div class="max-w-3xl mb-12">
-                <span class="text-xs font-bold uppercase tracking-widest text-gold-400">06 — Institutional Credentialing</span>
-                <h2 class="display-font text-2xl sm:text-3xl lg:text-4xl font-bold text-white mt-2 mb-4">
+                <span class="text-xs font-bold uppercase tracking-widest text-gold-400">06 — Institutional Credibility</span>
+                <h2 class="display-font text-2xl sm:text-3xl font-bold text-white mt-2 mb-3">
                     Federal & State Government Vendor Profile
                 </h2>
-                <p class="editorial-font text-lg text-slate-300">
-                    Verified corporate credentials, state supplier registrations, and primary NAICS classifications for institutional contracting.
+                <p class="text-xs text-slate-400">
+                    Verified business identifiers for commercial procurement and institutional contracting.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <!-- Identifiers Banner Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
                 
-                <!-- Core Credentials Card -->
-                <div class="lg:col-span-6 glass-card rounded-xl p-8">
-                    <h3 class="text-sm font-semibold text-gold-400 uppercase tracking-wider mb-6 pb-3 border-b border-slate-800">
-                        Corporate & Vendor Identifiers
-                    </h3>
+                <div class="bg-navy-900 p-5 rounded-lg border border-slate-800">
+                    <span class="text-[10px] uppercase font-bold text-steel-400 block mb-1">PA SRM Vendor No.</span>
+                    <div class="text-lg font-mono font-bold text-gold-400 select-all">0000573044</div>
+                    <span class="text-[10px] text-slate-500 mt-1 block">Pennsylvania Procurement</span>
+                </div>
 
-                    <div class="space-y-4 text-xs">
-                        <div class="flex justify-between items-center py-2 border-b border-slate-800/60">
-                            <span class="text-slate-400">Legal Business Name:</span>
-                            <span class="font-semibold text-white">BLUEJAY PHENOMENAL GROUP, LLC</span>
+                <div class="bg-navy-900 p-5 rounded-lg border border-slate-800">
+                    <span class="text-[10px] uppercase font-bold text-steel-400 block mb-1">Federal UEI</span>
+                    <div class="text-lg font-mono font-bold text-gold-400 select-all">EG6QRC8YPEK8</div>
+                    <span class="text-[10px] text-slate-500 mt-1 block">SAM.gov Registered</span>
+                </div>
+
+                <div class="bg-navy-900 p-5 rounded-lg border border-slate-800">
+                    <span class="text-[10px] uppercase font-bold text-steel-400 block mb-1">Business Structure</span>
+                    <div class="text-sm font-bold text-white mt-1">PA Limited Liability Co.</div>
+                    <span class="text-[10px] text-slate-500 mt-1 block">100% Single-Member Owned</span>
+                </div>
+
+                <div class="bg-navy-900 p-5 rounded-lg border border-slate-800">
+                    <span class="text-[10px] uppercase font-bold text-steel-400 block mb-1">PA Business Certifications</span>
+                    <div class="flex items-center gap-2 mt-1">
+                        <span class="px-2 py-0.5 bg-navy-800 text-gold-400 text-[11px] font-bold rounded border border-gold-500/20">SB</span>
+                        <span class="px-2 py-0.5 bg-navy-800 text-gold-400 text-[11px] font-bold rounded border border-gold-500/20">MBC</span>
+                    </div>
+                    <span class="text-[10px] text-slate-500 mt-1 block">Small & Micro Business</span>
+                </div>
+
+            </div>
+
+            <!-- Entity & NAICS Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 bg-navy-900/80 p-8 rounded-xl border border-slate-800">
+                
+                <div class="lg:col-span-5 space-y-4 border-b lg:border-b-0 lg:border-r border-slate-800 pb-6 lg:pb-0 lg:pr-8">
+                    <h3 class="text-xs font-semibold uppercase tracking-wider text-white">Entity Legal Details</h3>
+                    <div class="space-y-2 text-xs">
+                        <div>
+                            <span class="text-slate-400 block">Legal Business Name:</span>
+                            <span class="font-semibold text-slate-200">BLUEJAY PHENOMENAL GROUP, LLC</span>
                         </div>
-                        <div class="flex justify-between items-center py-2 border-b border-slate-800/60">
-                            <span class="text-slate-400">DBA:</span>
-                            <span class="font-semibold text-white">BLUEJAY PHENOMENAL PUBLISHERS</span>
+                        <div>
+                            <span class="text-slate-400 block">DBA:</span>
+                            <span class="font-semibold text-slate-200">BLUEJAY PHENOMENAL PUBLISHERS</span>
                         </div>
-                        <div class="flex justify-between items-center py-2 border-b border-slate-800/60">
-                            <span class="text-slate-400">PA SRM Vendor Number:</span>
-                            <span class="font-mono font-bold text-gold-400">0000573044</span>
-                        </div>
-                        <div class="flex justify-between items-center py-2 border-b border-slate-800/60">
-                            <span class="text-slate-400">Federal UEI:</span>
-                            <span class="font-mono font-bold text-gold-400">EG6QRC8YPEK8</span>
-                        </div>
-                        <div class="flex justify-between items-center py-2 border-b border-slate-800/60">
-                            <span class="text-slate-400">Business Structure:</span>
-                            <span class="font-semibold text-white">Pennsylvania LLC (Single-Member)</span>
-                        </div>
-                        <div class="flex justify-between items-center py-2">
-                            <span class="text-slate-400">Pennsylvania Certifications:</span>
-                            <span class="font-semibold text-white">Small Business (SB) | Micro Business (MBC)</span>
+                        <div>
+                            <span class="text-slate-400 block">Ownership & Governance:</span>
+                            <span class="text-slate-300">100% Single-Member Ownership (Axel Desarden)</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- NAICS Classifications Card -->
-                <div class="lg:col-span-6 glass-card rounded-xl p-8">
-                    <h3 class="text-sm font-semibold text-gold-400 uppercase tracking-wider mb-6 pb-3 border-b border-slate-800">
-                        NAICS Classifications & Service Scope
-                    </h3>
-
-                    <ul class="space-y-3 text-xs text-slate-300">
-                        <li class="flex items-start gap-3">
-                            <span class="font-mono text-gold-400 font-bold shrink-0">541611</span>
-                            <span>Administrative Management and General Management Consulting Services</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="font-mono text-gold-400 font-bold shrink-0">611430</span>
-                            <span>Professional and Management Development Training</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="font-mono text-gold-400 font-bold shrink-0">611710</span>
-                            <span>Educational Support Services</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="font-mono text-gold-400 font-bold shrink-0">611699</span>
-                            <span>All Other Miscellaneous Schools and Instruction</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="font-mono text-gold-400 font-bold shrink-0">624190</span>
-                            <span>Other Individual and Family Services</span>
-                        </li>
-                    </ul>
-
-                    <div class="mt-6 pt-4 border-t border-slate-800 text-[11px] text-slate-400 italic">
-                        Note: Classifications reflect established business capabilities and procurement alignments, not specific Gault Center contractual prerequisites.
+                <div class="lg:col-span-7 space-y-4">
+                    <h3 class="text-xs font-semibold uppercase tracking-wider text-white">NAICS Code Classifications</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                        <div class="bg-navy-800/60 p-2.5 rounded border border-slate-800">
+                            <span class="font-mono text-gold-400 font-bold block">541611</span>
+                            <span class="text-slate-300 text-[11px]">Admin & General Management Consulting</span>
+                        </div>
+                        <div class="bg-navy-800/60 p-2.5 rounded border border-slate-800">
+                            <span class="font-mono text-gold-400 font-bold block">611430</span>
+                            <span class="text-slate-300 text-[11px]">Professional & Management Development</span>
+                        </div>
+                        <div class="bg-navy-800/60 p-2.5 rounded border border-slate-800">
+                            <span class="font-mono text-gold-400 font-bold block">611710</span>
+                            <span class="text-slate-300 text-[11px]">Educational Support Services</span>
+                        </div>
+                        <div class="bg-navy-800/60 p-2.5 rounded border border-slate-800">
+                            <span class="font-mono text-gold-400 font-bold block">611699</span>
+                            <span class="text-slate-300 text-[11px]">All Other Miscellaneous Instruction</span>
+                        </div>
                     </div>
+                    <p class="text-[11px] text-slate-500 italic mt-2">
+                        *Note: NAICS codes represent general business capability classifications, not specific Gault Center procurement requirements.
+                    </p>
                 </div>
 
             </div>
@@ -732,129 +744,280 @@
         </div>
     </section>
 
-    <!-- COMMERCIAL ENGAGEMENT & CLOSING SECTION -->
-    <section class="py-20 relative bg-navy-900 border-t border-slate-800">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <!-- SECTION 07: PROPOSED ENGAGEMENT & CLOSING CTA -->
+    <section class="py-20 relative bg-navy-900">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             
-            <span class="text-xs font-bold uppercase tracking-widest text-gold-400">Commercial Engagement</span>
-            <h2 class="display-font text-2xl sm:text-3xl font-bold text-white mt-2 mb-6">
-                Proposed Engagement & Implementation
-            </h2>
-            
-            <p class="editorial-font text-lg text-slate-300 leading-relaxed mb-8">
-                A pilot engagement would be scoped in consultation with The Gault Center leadership, with careful consideration for learning objectives, participant audience size, delivery format, scheduling, facilitation requirements, and commercial contracting terms.
-            </p>
+            <div class="glass-card p-8 sm:p-12 rounded-2xl border border-gold-500/30 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-gold-500/10 rounded-full blur-2xl"></div>
 
-            <blockquote class="editorial-font italic text-xl text-gold-400 border-y border-slate-800 py-6 my-8">
-                "BlueJay Phenomenal Group seeks to complement established youth defense education through structured, narrative-based learning experiences grounded in lived experience, reflection, and professional application."
-            </blockquote>
+                <span class="text-xs font-bold uppercase tracking-widest text-gold-400">Commercial Engagement</span>
+                <h2 class="display-font text-2xl sm:text-4xl font-bold text-white mt-2 mb-6">
+                    Proposed Engagement & Implementation
+                </h2>
 
-            <div class="mt-8">
-                <button onclick="openModal()" class="px-8 py-4 text-sm font-bold uppercase tracking-wider text-navy-900 bg-gold-500 hover:bg-gold-400 rounded transition shadow-xl shadow-gold-500/10">
-                    Discuss A Proposed Paid Pilot
-                </button>
+                <p class="editorial-font text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto mb-8 leading-relaxed">
+                    "BlueJay Phenomenal Group seeks to complement established youth defense education through structured, narrative-based learning experiences grounded in lived experience, reflection, and professional application."
+                </p>
+
+                <div class="bg-navy-800/80 p-6 rounded-xl border border-slate-700/80 max-w-2xl mx-auto text-left mb-8 space-y-2 text-xs text-slate-300">
+                    <div class="font-semibold text-gold-400 uppercase tracking-wider mb-2">Scope Factors for Discussion:</div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-gold-500 text-[8px]"></i> Learning objectives alignment</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-gold-500 text-[8px]"></i> Audience size & target role</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-gold-500 text-[8px]"></i> Delivery format (Virtual / In-Person)</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-gold-500 text-[8px]"></i> Scheduling & prep requirements</div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <button onclick="openModal()" class="w-full sm:w-auto px-8 py-4 text-xs font-bold uppercase tracking-wider text-navy-900 bg-gold-500 hover:bg-gold-400 rounded-lg transition shadow-xl shadow-gold-500/10">
+                        DISCUSS A PROPOSED PAID PILOT
+                    </button>
+                    <button onclick="openTabModal()" class="w-full sm:w-auto px-6 py-4 text-xs font-medium uppercase tracking-wider text-steel-300 hover:text-white border border-slate-700 rounded-lg transition">
+                        View Repository Files
+                    </button>
+                </div>
+
             </div>
 
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-navy-900 border-t border-slate-800/80 py-12 text-xs text-slate-500">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div>
-                <span class="text-slate-300 font-semibold block mb-1">BlueJay Phenomenal Group, LLC</span>
-                <span>Independent Professional Services & Educational Consulting</span>
+    <footer class="bg-navy-950 border-t border-slate-800 py-12 text-xs text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                    <div class="font-semibold text-slate-200">BlueJay Phenomenal Group, LLC</div>
+                    <div class="text-[11px] text-slate-500 mt-1">PA SRM: 0000573044 | Federal UEI: EG6QRC8YPEK8</div>
+                </div>
+
+                <div class="text-center md:text-right text-[11px] text-slate-500 max-w-md">
+                    Targeted Business Development Proposal prepared for consideration regarding professional learning alignment with youth defense education.
+                </div>
             </div>
-            <div class="text-center md:text-right">
-                <span>Prepared for The Gault Center | November 2026</span>
-                <span class="block mt-1 text-slate-600">All rights reserved. Hosted on GitHub Pages.</span>
+
+            <div class="mt-8 pt-6 border-t border-slate-900 text-center text-[10px] text-slate-600">
+                &copy; BlueJay Phenomenal Group, LLC. All rights reserved. Designed for GitHub Pages Deployment.
             </div>
         </div>
     </footer>
 
-    <!-- INTERACTIVE MODAL FOR PILOT DISCUSSION -->
-    <div id="contact-modal" class="fixed inset-0 z-50 hidden bg-navy-900/80 modal-blur flex items-center justify-center p-4">
-        <div class="glass-card rounded-2xl max-w-lg w-full p-6 sm:p-8 relative border border-gold-500/30">
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-lg">
-                <i class="fa-solid fa-xmark"></i>
+    <!-- BACK TO TOP BUTTON -->
+    <button id="back-to-top" onclick="scrollToTop()" class="fixed bottom-6 right-6 w-10 h-10 rounded-full bg-navy-800 border border-gold-500/40 text-gold-400 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 z-50 hover:bg-gold-500 hover:text-navy-900">
+        <i class="fa-solid fa-arrow-up text-sm"></i>
+    </button>
+
+    <!-- ENGAGEMENT DISCUSSION MODAL -->
+    <div id="engagement-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 modal-blur bg-navy-950/80 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-navy-800 border border-gold-500/40 w-full max-w-lg rounded-xl p-6 sm:p-8 relative shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-lg"></i>
             </button>
 
-            <div class="mb-6">
-                <span class="text-[10px] font-bold uppercase tracking-widest text-gold-400">Collaboration Inquiry</span>
-                <h3 class="display-font text-xl font-bold text-white mt-1">Discuss a Proposed Paid Pilot</h3>
-                <p class="text-xs text-slate-300 mt-2">
-                    Initiate a conversation regarding scope, learning objectives, scheduling, and commercial contracting arrangements with BlueJay Phenomenal Group.
-                </p>
-            </div>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-gold-400">Direct Inquiries</span>
+            <h3 class="display-font text-xl font-bold text-white mt-1 mb-2">Discuss Proposed Paid Pilot</h3>
+            <p class="text-xs text-slate-300 mb-6">
+                Initiate a conversation regarding scope, participant size, scheduling, and custom contracting arrangements.
+            </p>
 
-            <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+            <div class="space-y-4 text-xs">
                 <div>
-                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1">Your Name / Title</label>
-                    <input type="text" required class="w-full px-3 py-2 bg-navy-900 border border-slate-700 rounded text-sm text-white focus:border-gold-500 focus:outline-none" placeholder="e.g., Sarah Johnson / The Gault Center">
+                    <label class="block text-slate-400 mb-1">Contact Email Placeholder</label>
+                    <div class="p-3 bg-navy-900 rounded border border-slate-700 text-gold-400 font-mono text-sm select-all flex justify-between items-center">
+                        <span>axeldesarden7@gmail.com</span>
+                        <button onclick="copyEmail()" class="text-xs text-slate-400 hover:text-white">
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                    </div>
                 </div>
-                <div>
-                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1">Professional Email</label>
-                    <input type="email" required class="w-full px-3 py-2 bg-navy-900 border border-slate-700 rounded text-sm text-white focus:border-gold-500 focus:outline-none" placeholder="s.johnson@defendyouthrights.org">
+
+                <div class="p-4 bg-navy-900/50 rounded border border-slate-800 text-slate-300 text-[11px] space-y-2">
+                    <p><strong>Proposed Consultation Topics:</strong></p>
+                    <ul class="list-disc list-inside space-y-1 text-slate-400">
+                        <li>75–90 Minute Pilot Learning Lab alignment</li>
+                        <li>Audience customization for defender programs</li>
+                        <li>Virtual vs. On-site delivery scope</li>
+                        <li>State/Federal vendor procurement path</li>
+                    </ul>
                 </div>
-                <div>
-                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1">Inquiry / Proposed Scope Notes</label>
-                    <textarea rows="4" class="w-full px-3 py-2 bg-navy-900 border border-slate-700 rounded text-sm text-white focus:border-gold-500 focus:outline-none" placeholder="Share any initial thoughts on audience size, format, or timing..."></textarea>
+
+                <div class="pt-2">
+                    <a href="mailto:axeldesarden7@gmail.com?subject=Inquiry%3A%20Beyond%20the%20Case%20Proposed%20Pilot" class="block w-full py-3 text-center text-xs font-bold uppercase tracking-wider text-navy-900 bg-gold-500 hover:bg-gold-400 rounded transition">
+                        Launch Email Client
+                    </a>
                 </div>
-                <button type="submit" class="w-full py-3 bg-gold-500 hover:bg-gold-400 text-navy-900 text-xs font-bold uppercase tracking-wider rounded transition">
-                    Send Inquiry to Axel Desarden
-                </button>
-            </form>
-            <div id="form-success" class="hidden mt-4 p-3 bg-emerald-900/40 border border-emerald-500/40 text-emerald-300 text-xs rounded text-center">
-                Inquiry prepared. (Note: For direct outreach, contact axeldesarden7@gmail.com).
             </div>
         </div>
     </div>
 
-    <!-- JAVASCRIPT INTERACTIONS -->
-    <script>
-        // Mobile Menu Toggle
-        const mobileBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
+    <!-- CODE FILES TAB MODAL (FOR DEPLOYMENT INSPECTION) -->
+    <div id="tab-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 modal-blur bg-navy-950/90 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-navy-900 border border-slate-700 w-full max-w-5xl h-[85vh] rounded-xl flex flex-col overflow-hidden shadow-2xl">
+            
+            <!-- Modal Header -->
+            <div class="px-6 py-4 border-b border-slate-800 flex items-center justify-between bg-navy-950">
+                <div>
+                    <h3 class="text-sm font-bold text-white uppercase tracking-wider">GitHub Pages Repository Source Files</h3>
+                    <p class="text-[11px] text-slate-400">View source code files required for deployment.</p>
+                </div>
+                <button onclick="closeTabModal()" class="text-slate-400 hover:text-white">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
 
-        mobileBtn.addEventListener('click', () => {
+            <!-- Tab Buttons Header -->
+            <div class="flex border-b border-slate-800 bg-navy-900/50 px-4 text-xs font-mono">
+                <button class="tab-btn active px-4 py-3" onclick="switchTab('html-code')">index.html</button>
+                <button class="tab-btn px-4 py-3" onclick="switchTab('css-code')">style.css</button>
+                <button class="tab-btn px-4 py-3" onclick="switchTab('js-code')">script.js</button>
+                <button class="tab-btn px-4 py-3" onclick="switchTab('readme-code')">README.md</button>
+            </div>
+
+            <!-- Code Display Area -->
+            <div class="flex-1 p-6 overflow-y-auto bg-navy-950 font-mono text-xs text-slate-300">
+                
+                <div id="html-code" class="tab-content">
+                    <pre><code>&lt;!-- Complete single-file responsive layout implemented as visible in preview --&gt;
+&lt;!-- Includes Tailwind CSS, custom components, and accessible color scheme --&gt;</code></pre>
+                </div>
+
+                <div id="css-code" class="tab-content hidden">
+                    <pre><code>/* style.css - Clean styling extension */
+body {
+    background-color: #060D17;
+    color: #E2E8F0;
+    font-family: 'Inter', sans-serif;
+}
+
+.display-font { font-family: 'Cinzel', serif; }
+.editorial-font { font-family: 'Newsreader', serif; }
+
+.glass-card {
+    background: rgba(13, 31, 60, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(197, 160, 89, 0.15);
+}</code></pre>
+                </div>
+
+                <div id="js-code" class="tab-content hidden">
+                    <pre><code>// script.js - Interactive Controls
+document.addEventListener('DOMContentLoaded', () => {
+    // Navigation and Back-To-Top scroll listener
+    window.addEventListener('scroll', () => {
+        const backToTopBtn = document.getElementById('back-to-top');
+        if (window.scrollY > 400) {
+            backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+        } else {
+            backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+        }
+    });
+});</code></pre>
+                </div>
+
+                <div id="readme-code" class="tab-content hidden">
+                    <pre><code># BEYOND THE CASE — GitHub Pages Deployment Guide
+
+## Quick Deployment Steps:
+1. Create a new GitHub repository named `beyond-the-case`.
+2. Commit `index.html` (and optionally `assets/axel-desarden-headshot.jpg`).
+3. Navigate to **Settings** -> **Pages**.
+4. Under **Build and deployment**, set Source to `Deploy from a branch` (main / root).
+5. Click **Save**. Your site will be published automatically.
+
+## Vendor Credentials Reference:
+- Entity: BLUEJAY PHENOMENAL GROUP, LLC
+- PA SRM: 0000573044
+- Federal UEI: EG6QRC8YPEK8</code></pre>
+                </div>
+
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="px-6 py-3 border-t border-slate-800 bg-navy-950 flex justify-between items-center text-xs text-slate-400">
+                <span>GitHub Pages Ready</span>
+                <button onclick="closeTabModal()" class="px-4 py-1.5 bg-navy-800 border border-slate-700 rounded text-slate-200 hover:bg-slate-700">Close Window</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT FOR INTERACTIVITY -->
+    <script>
+        // Mobile Navigation Drawer Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
-            menuIcon.classList.toggle('fa-bars');
-            menuIcon.classList.toggle('fa-xmark');
         });
 
         function closeMobileMenu() {
             mobileMenu.classList.add('hidden');
-            menuIcon.classList.remove('fa-xmark');
-            menuIcon.classList.add('fa-bars');
         }
 
-        // Modal Controls
-        const modal = document.getElementById('contact-modal');
-        function openModal() {
-            modal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-        }
-        function closeModal() {
-            modal.classList.add('hidden');
-            document.body.style.overflow = 'auto';
-        }
-
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            document.getElementById('form-success').classList.remove('hidden');
-            setTimeout(() => {
-                closeModal();
-                document.getElementById('form-success').classList.add('hidden');
-            }, 3000);
-        }
-
-        // Close modal on outside click
-        window.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                closeModal();
+        // Back to Top Scroll Logic
+        window.addEventListener('scroll', () => {
+            const backToTopBtn = document.getElementById('back-to-top');
+            if (window.scrollY > 400) {
+                backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
             }
         });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Engagement Modal Controls
+        function openModal() {
+            const modal = document.getElementById('engagement-modal');
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('engagement-modal');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+        }
+
+        // Code Inspection Tab Modal Controls
+        function openTabModal() {
+            const modal = document.getElementById('tab-modal');
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+        }
+
+        function closeTabModal() {
+            const modal = document.getElementById('tab-modal');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+        }
+
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+
+            document.getElementById(tabId).classList.remove('hidden');
+            event.target.classList.add('active');
+        }
+
+        // Clipboard Copy Helper
+        function copyEmail() {
+            const emailText = 'axeldesarden7@gmail.com';
+            const tempInput = document.createElement('textarea');
+            tempInput.value = emailText;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            
+            // Subtle toast feedback
+            const btn = event.currentTarget;
+            btn.innerHTML = '<i class="fa-solid fa-check text-gold-400"></i>';
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fa-regular fa-copy"></i>';
+            }, 2000);
+        }
     </script>
 </body>
 </html>
+
