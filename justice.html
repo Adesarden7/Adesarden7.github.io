@@ -1,236 +1,1105 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlueJay Phenomenal Group, LLC | Contracting & Procurement Portal</title>
-    <meta name="description" content="Institutional procurement portal for BlueJay Phenomenal Group, LLC. PA Certified Small & Micro Business, UEI EG6QRC8YPEK8, CAGE 279D7, offering narrative-based interventions, curriculum development, and facilitation services.">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>BlueJay Phenomenal Group, LLC | Institutional Capabilities & Government Procurement</title>
+    <meta name="description" content="Specialized consulting, narrative-based educational programming, and facilitated reflection for juvenile justice, corrections, reentry, and institutional environments.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <style>
-        .justice-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
-        .video-container video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 1rem; }
+        :root {
+            --navy-dark: #070D1F;
+            --navy-primary: #0A1128;
+            --navy-card: #111D3B;
+            --navy-border: #1E2D53;
+            --gold-primary: #D4AF37;
+            --gold-light: #F3E5AB;
+            --gold-dark: #AA820A;
+            --text-main: #F8F9FA;
+            --text-muted: #94A3B8;
+            --accent-glow: rgba(212, 175, 55, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--navy-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--text-main);
+        }
+
+        a {
+            color: var(--gold-primary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--gold-light);
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Top Bar & Header */
+        header {
+            background: var(--navy-primary);
+            border-bottom: 1px solid var(--navy-border);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo-area {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .brand-logo-area img {
+            height: 48px;
+            width: auto;
+            border-radius: 4px;
+        }
+
+        .brand-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: var(--text-main);
+        }
+
+        .brand-subtitle {
+            font-size: 0.75rem;
+            color: var(--gold-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--gold-primary);
+            text-decoration: none;
+        }
+
+        .btn-procurement {
+            background: var(--gold-primary);
+            color: var(--navy-dark);
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: background 0.2s;
+        }
+
+        .btn-procurement:hover {
+            background: var(--gold-light);
+            text-decoration: none;
+            color: var(--navy-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 5rem 0 4rem;
+            background: linear-gradient(135deg, var(--navy-primary) 0%, var(--navy-dark) 100%);
+            border-bottom: 1px solid var(--navy-border);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content h1 span {
+            color: var(--gold-primary);
+        }
+
+        .hero-lead {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .executive-card {
+            background: var(--navy-card);
+            border: 1px solid var(--navy-border);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            position: relative;
+        }
+
+        .executive-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gold-primary);
+            border-radius: 8px 8px 0 0;
+        }
+
+        .executive-profile {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .executive-headshot {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--gold-primary);
+        }
+
+        .executive-info h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .executive-info p {
+            color: var(--gold-primary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .identifiers-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--navy-border);
+        }
+
+        .identifier-item label {
+            display: block;
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.25rem;
+        }
+
+        .identifier-item val {
+            font-family: monospace;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--gold-light);
+            background: rgba(0,0,0,0.3);
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            display: inline-block;
+        }
+
+        /* Certifications Section */
+        .certifications-section {
+            padding: 4rem 0;
+            background: var(--navy-primary);
+            border-bottom: 1px solid var(--navy-border);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .cert-box {
+            background: var(--navy-card);
+            border: 1px solid var(--navy-border);
+            border-radius: 8px;
+            padding: 2rem;
+        }
+
+        .cert-box h3 {
+            color: var(--gold-primary);
+            font-size: 1.1rem;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cert-list {
+            list-style: none;
+        }
+
+        .cert-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--navy-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+
+        .cert-list li:last-child {
+            border-bottom: none;
+        }
+
+        .badge-verified {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--gold-primary);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        /* Company Overview & Capabilities */
+        .overview-section {
+            padding: 5rem 0;
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .overview-text h2 {
+            font-size: 2.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .overview-text p {
+            color: var(--text-muted);
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .capability-card {
+            background: var(--navy-card);
+            border: 1px solid var(--navy-border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .capability-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--gold-primary);
+        }
+
+        .capability-card h4 {
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .capability-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        /* MRR Methodology Section */
+        .mrr-section {
+            padding: 5rem 0;
+            background: var(--navy-primary);
+            border-top: 1px solid var(--navy-border);
+            border-bottom: 1px solid var(--navy-border);
+        }
+
+        .mrr-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3.5rem;
+        }
+
+        .mrr-intro h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .mrr-quote {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.4rem;
+            color: var(--gold-primary);
+            margin-top: 1.5rem;
+        }
+
+        .mrr-steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .mrr-step-card {
+            background: var(--navy-card);
+            border: 1px solid var(--navy-border);
+            border-radius: 8px;
+            padding: 2rem 1.5rem;
+            position: relative;
+        }
+
+        .mrr-step-card .step-num {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--navy-border);
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+        }
+
+        .mrr-step-card h3 {
+            color: var(--gold-primary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .mrr-step-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .progression-banner {
+            margin-top: 3rem;
+            background: var(--navy-card);
+            border: 1px solid var(--gold-primary);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: var(--gold-light);
+        }
+
+        /* Cinematic Catalyst Section */
+        .film-section {
+            padding: 5rem 0;
+        }
+
+        .film-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .film-content h2 {
+            font-size: 2.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .film-content p {
+            color: var(--text-muted);
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        .film-quote-box {
+            border-left: 3px solid var(--gold-primary);
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: var(--text-main);
+        }
+
+        .film-poster-container {
+            background: var(--navy-card);
+            border: 1px solid var(--navy-border);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .film-poster-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        /* Institutional Applications */
+        .applications-section {
+            padding: 5rem 0;
+            background: var(--navy-primary);
+            border-top: 1px solid var(--navy-border);
+            border-bottom: 1px solid var(--navy-border);
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .app-card {
+            background: var(--navy-card);
+            border: 1px solid var(--navy-border);
+            border-radius: 8px;
+            padding: 2rem;
+        }
+
+        .app-card h3 {
+            color: var(--gold-primary);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .app-card ul {
+            list-style: none;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .app-card li {
+            padding: 0.4rem 0;
+            position: relative;
+            padding-left: 1.2rem;
+        }
+
+        .app-card li::before {
+            content: "•";
+            color: var(--gold-primary);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Government Contracting & Procurement Readiness */
+        .procurement-section {
+            padding: 5rem 0;
+        }
+
+        .procurement-table-wrapper {
+            background: var(--navy-card);
+            border: 1px solid var(--navy-border);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--navy-border);
+            font-size: 0.95rem;
+        }
+
+        th {
+            background: rgba(0,0,0,0.2);
+            color: var(--gold-primary);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+        }
+
+        td {
+            color: var(--text-muted);
+        }
+
+        td strong {
+            color: var(--text-main);
+        }
+
+        .classification-category-title {
+            font-size: 1.35rem;
+            color: var(--gold-primary);
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-bottom: 1px solid var(--navy-border);
+            padding-bottom: 0.5rem;
+        }
+
+        .documents-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .doc-link-btn {
+            background: var(--navy-card);
+            border: 1px solid var(--gold-primary);
+            color: var(--gold-light);
+            padding: 0.75rem 1.25rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: background 0.2s;
+        }
+
+        .doc-link-btn:hover {
+            background: rgba(212, 175, 55, 0.1);
+            text-decoration: none;
+            color: var(--gold-primary);
+        }
+
+        /* Footer / Contact Section */
+        footer {
+            background: var(--navy-primary);
+            border-top: 1px solid var(--navy-border);
+            padding: 5rem 0 3rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .footer-content h2 {
+            font-size: 2.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-content p {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .contact-email {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--gold-primary);
+            margin-bottom: 2rem;
+            display: inline-block;
+        }
+
+        .copyright {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--navy-border);
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .hero-grid, .overview-grid, .film-grid, .cert-grid, .apps-grid, .mrr-steps-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .identifiers-grid {
+                grid-template-columns: 1fr;
+            }
+            nav ul {
+                display: none;
+            }
+            .hero-content h1 {
+                font-size: 2.25rem;
+            }
+        }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans leading-relaxed">
+<body>
 
-    <!-- Top Procurement Bar -->
-    <div class="bg-blue-950 text-blue-100 py-3 px-6 border-b border-blue-800 shadow-inner">
-        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center text-xs sm:text-sm font-medium gap-3">
-            <div class="flex items-center space-x-2">
-                <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span class="font-bold text-white tracking-wide uppercase">Official Government Procurement & Vendor Profile</span>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container nav-container">
+            <div class="brand-logo-area">
+                <img src="Principal_Consultant_Liaison.jpg" alt="BlueJay Phenomenal Group Logo" onerror="this.style.display='none'">
+                <div>
+                    <div class="brand-title">BLUEJAY PHENOMENAL GROUP</div>
+                    <div class="brand-subtitle">Institutional Consulting & Educational Services</div>
+                </div>
             </div>
-            <div class="flex flex-wrap gap-2 items-center justify-center">
-                <span class="bg-blue-900/90 py-1 px-3 rounded border border-blue-700 text-blue-50 font-mono">
-                    <strong>PA SRM:</strong> 0000573044
-                </span>
-                <span class="bg-blue-900/90 py-1 px-3 rounded border border-blue-700 text-blue-50 font-mono">
-                    <strong>UEI:</strong> EG6QRC8YPEK8
-                </span>
-                <span class="bg-blue-900/90 py-1 px-3 rounded border border-blue-700 text-blue-50 font-mono">
-                    <strong>CAGE:</strong> 279D7
-                </span>
-                <span class="bg-emerald-800 text-emerald-100 py-1 px-3 rounded border border-emerald-600 font-semibold">
-                    PA Certified Small & Micro Business (SB / MCB)
-                </span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Navigation Header -->
-    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200 shadow-sm">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div>
-                <span class="text-xl font-bold tracking-tight text-slate-900 block">BlueJay Phenomenal Group, LLC</span>
-                <span class="text-xs text-slate-500 font-semibold tracking-wider uppercase">Axel Desarden • Principal Consultant & Founder</span>
-            </div>
-            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-700">
-                <a href="#certifications" class="text-blue-700 font-semibold hover:underline">Socioeconomic Status</a>
-                <a href="#overview" class="hover:text-blue-700 transition">Overview</a>
-                <a href="#methodology" class="hover:text-blue-700 transition">MRR Framework</a>
-                <a href="#film" class="hover:text-blue-700 transition">Cinematic Catalyst</a>
-                <a href="#contact" class="bg-blue-900 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition shadow-sm">Agency Contact</a>
+            <nav>
+                <ul>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#methodology">Methodology</a></li>
+                    <li><a href="#applications">Applications</a></li>
+                    <li><a href="#procurement">Procurement Data</a></li>
+                    <li><a href="#contact" class="btn-procurement">Contact & Inquiries</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
-    <!-- SECTION 1: SOCIOECONOMIC STATUS & CERTIFICATIONS (MOVED TO TOP) -->
-    <section id="certifications" class="bg-white py-16 px-6 border-b border-slate-200">
-        <div class="max-w-7xl mx-auto space-y-10">
-            <div class="max-w-3xl space-y-3">
-                <div class="inline-flex items-center space-x-2 bg-blue-50 text-blue-800 px-3 py-1 rounded text-xs font-bold uppercase tracking-wider border border-blue-200">
-                    <span>For Contracting & Procurement Officers</span>
-                </div>
-                <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-                    Socioeconomic Status & Vendor Credentials
-                </h1>
-                <p class="text-slate-600 text-base">
-                    BlueJay Phenomenal Group, LLC maintains active state and federal procurement verifications designed to streamline contracting for alternative-to-incarceration, juvenile justice, and educational programs.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-6">
-                <!-- State Credentials -->
-                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
-                    <div class="text-xs font-mono uppercase tracking-widest text-blue-700 font-bold">Commonwealth of PA</div>
-                    <h3 class="text-lg font-bold text-slate-900">State Procurement Data</h3>
-                    <ul class="text-sm text-slate-700 space-y-2 font-medium">
-                        <li><strong>SRM Vendor Number:</strong> <span class="font-mono text-slate-900">0000573044</span></li>
-                        <li><strong>Small Business (SB):</strong> <span class="text-emerald-700 font-semibold">Verified</span></li>
-                        <li><strong>Micro Business (MCB):</strong> <span class="text-emerald-700 font-semibold">Verified</span></li>
-                        <li><strong>Procurement Portal:</strong> PA Supplier Portal / PRISM</li>
-                    </ul>
-                </div>
-
-                <!-- Federal Credentials -->
-                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
-                    <div class="text-xs font-mono uppercase tracking-widest text-blue-700 font-bold">Federal Compliance</div>
-                    <h3 class="text-lg font-bold text-slate-900">SAM.gov Registration</h3>
-                    <ul class="text-sm text-slate-700 space-y-2 font-medium">
-                        <li><strong>Unique Entity ID (UEI):</strong> <span class="font-mono text-slate-900">EG6QRC8YPEK8</span></li>
-                        <li><strong>CAGE Code:</strong> <span class="font-mono text-slate-900">279D7</span></li>
-                        <li><strong>IRS TIN Match:</strong> <span class="text-emerald-700 font-semibold">Passed & Validated</span></li>
-                        <li><strong>Entity Status:</strong> Active for Federal Contracting</li>
-                    </ul>
-                </div>
-
-                <!-- Classification Codes -->
-                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
-                    <div class="text-xs font-mono uppercase tracking-widest text-blue-700 font-bold">Classification Codes</div>
-                    <h3 class="text-lg font-bold text-slate-900">Service Classifications</h3>
-                    <ul class="text-sm text-slate-700 space-y-2 font-medium">
-                        <li><strong>Primary Focus:</strong> Training Services, Consulting & Curriculum Development</li>
-                        <li><strong>Scope:</strong> Juvenile Justice, Reentry, ATI & Educational Workshops</li>
-                        <li><strong>Methodology:</strong> Cognitive-Behavioral Narrative Responsivity (RNR Aligned)</li>
-                    </ul>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1>Narrative-Based Educational Programming & <span>Institutional Consulting</span></h1>
+                <p class="hero-lead">Delivering lived-experience-informed leadership development, structured facilitated reflection, and cinematic educational resources for juvenile justice, corrections, diversion, and institutional environments.</p>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="#procurement" class="btn-procurement">Government Procurement Portal</a>
+                    <a href="#methodology" class="doc-link-btn" style="border-color: var(--navy-border);">Explore MRR Framework</a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- SECTION 2: HERO WITH HEADSHOT & PROFESSIONAL PROFILE -->
-    <section id="overview" class="justice-gradient text-white py-20 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-12 gap-12 items-center">
-            <div class="md:col-span-7 space-y-6">
-                <div class="inline-flex items-center space-x-2 bg-blue-900/60 border border-blue-700 px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider text-blue-200">
-                    <span>Principal Consultant & Practitioner</span>
-                </div>
-                <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
-                    Program impact through Narrative Responsivity (Intervention & Prevention)
-                </h2>
-                <p class="text-lg text-slate-300 max-w-2xl font-normal leading-relaxed">
-                    Bridging lived experience, cognitive-behavioral principles, and structured reflection to support juvenile justice, reentry, and alternative-to-incarceration (ATI) frameworks.
-                </p>
-                <div class="pt-2">
-                    <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-xl transition shadow-lg inline-flex items-center space-x-2">
-                        <span>Request Agency Proposal / ITQ Info</span>
-                    </a>
-                </div>
-            </div>
-            
-            <!-- Headshot and Credentials Card -->
-            <div class="md:col-span-5 flex justify-center">
-                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl shadow-2xl max-w-sm w-full space-y-4 text-center">
-                    <div class="w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-blue-500 shadow-md">
-                        <img src="Principal_Consultant_Liaison.jpg" alt="Axel Desarden - Principal Consultant" class="w-full h-full object-cover">
+            <div>
+                <div class="executive-card">
+                    <div class="executive-profile">
+                        <img src="Principal_Consultant_Liaison.jpg" alt="Axel Desarden" class="executive-headshot" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2290%22 height=%2290%22%3E%3Crect width=%2290%22 height=%2290%22 fill=%22%231E2D53%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%23D4AF37%22 font-family=%22sans-serif%22 font-size=%2224%22%3EAD%3C/text%3E%3C/svg%3E'">
+                        <div class="executive-info">
+                            <h3>Axel Desarden</h3>
+                            <p>Principal Consultant & Founder</p>
+                            <span style="font-size: 0.8rem; color: var(--text-muted);">BlueJay Phenomenal Group, LLC</span>
+                        </div>
                     </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-white">Axel Desarden</h3>
-                        <p class="text-xs text-blue-400 font-mono uppercase tracking-wider mt-1">Principal Consultant & Founder</p>
-                    </div>
-                    <p class="text-xs text-slate-300 text-left leading-relaxed">
-                        Author of 10 books, filmmaker, certified life coach (CLC), professional consultant (PC), and curriculum developer with over 30 years of experience across justice-involved and educational sectors.
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                        DBA: BlueJay Phenomenal Publishers<br>
+                        Location: Tobyhanna, Pennsylvania (Est. June 1, 2018)
                     </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 3: METHODOLOGY -->
-    <section id="methodology" class="py-20 px-6 max-w-7xl mx-auto">
-        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-            <h2 class="text-3xl font-bold text-slate-900 tracking-tight">Mirror Reflection & Response (MRR) Methodology</h2>
-            <p class="text-slate-600">
-                A structured, four-part cognitive-behavioral intervention framework designed to complement existing RNR-aligned programming through narrative responsivity.
-            </p>
-        </div>
-        <div class="grid md:grid-cols-4 gap-6">
-            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3">
-                <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-900 font-bold flex items-center justify-center">01</div>
-                <h3 class="font-bold text-lg text-slate-900">The Mirror</h3>
-                <p class="text-sm text-slate-600">Examining personal history, distorted perceptions, and survival responses through guided self-reflection.</p>
-            </div>
-            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3">
-                <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-900 font-bold flex items-center justify-center">02</div>
-                <h3 class="font-bold text-lg text-slate-900">The Pen</h3>
-                <p class="text-sm text-slate-600">Expressive writing and narrative reconstruction to reframe personal identity and internal dialogue.</p>
-            </div>
-            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3">
-                <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-900 font-bold flex items-center justify-center">03</div>
-                <h3 class="font-bold text-lg text-slate-900">The Mic</h3>
-                <p class="text-sm text-slate-600">Accountability-centered dialogue and verbal ownership in a supportive group facilitation setting.</p>
-            </div>
-            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3">
-                <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-900 font-bold flex items-center justify-center">04</div>
-                <h3 class="font-bold text-lg text-slate-900">The Vision</h3>
-                <p class="text-sm text-slate-600">Future visioning, actionable decision-making, and practical planning for sustainable community reintegration.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 4: CINEMATIC CATALYST (FILM) -->
-    <section id="film" class="bg-slate-100 py-20 px-6 border-y border-slate-200">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-6">
-                <div class="inline-flex items-center space-x-2 bg-blue-200 text-blue-900 px-3 py-1 rounded text-xs font-semibold uppercase tracking-wider">
-                    <span>Cinematic Catalyst Component</span>
-                </div>
-                <h2 class="text-3xl font-bold text-slate-900 tracking-tight">Distorted Perception of Innocence</h2>
-                <p class="text-slate-600">
-                    A 40-minute autobiographical narrative film created to serve as an initial cinematic catalyst for engagement and reflection. The film opens the door to facilitated dialogue, helping participants confront distorted self-perceptions before moving into structured MRR exercises.
-                </p>
-                <div class="space-y-2 text-sm text-slate-700">
-                    <p>✓ Integrated with structured discussion and facilitator guides.</p>
-                    <p>✓ Deployed across juvenile facilities, law schools, and ATI seminars.</p>
-                </div>
-            </div>
-            <div class="bg-slate-900 p-4 rounded-2xl shadow-xl">
-                <div class="video-container bg-slate-950 flex items-center justify-center">
-                    <div class="text-center p-6 text-slate-400 space-y-2">
-                        <svg class="w-12 h-12 mx-auto text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        <p class="text-sm font-semibold text-slate-200">Cinematic Screening Preview</p>
-                        <p class="text-xs text-slate-400">Available for agency evaluation and institutional preview.</p>
+                    <div class="identifiers-grid">
+                        <div class="identifier-item">
+                            <label>Unique Entity ID (UEI)</label>
+                            <val>EG6QRC8YPEK8</val>
+                        </div>
+                        <div class="identifier-item">
+                            <label>CAGE Code</label>
+                            <val>[VERIFIED CODE REQUIRED]</val>
+                        </div>
+                    </div>
+                    <div class="identifiers-grid" style="margin-top: 1rem; padding-top: 1rem;">
+                        <div class="identifier-item" style="grid-column: span 2;">
+                            <label>PA Supplier Number</label>
+                            <val>0000573044</val>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 5: CONTACT & AGENCY INQUIRY -->
-    <footer id="contact" class="bg-slate-950 text-white py-16 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
-            <div class="space-y-4">
-                <h3 class="text-2xl font-bold tracking-tight">BlueJay Phenomenal Group, LLC</h3>
-                <p class="text-slate-400 text-sm max-w-md">
-                    Providing trauma-informed, accountability-centered professional consulting, training, and curriculum services across juvenile justice, reentry, and educational sectors.
-                </p>
-                <div class="text-xs text-slate-400 font-mono space-y-1 pt-2">
-                    <p>PA SRM Vendor Number: 0000573044</p>
-                    <p>Federal UEI: EG6QRC8YPEK8 | CAGE: 279D7</p>
-                    <p>Primary Email: axel@bluejayphenomenal.com</p>
+    <!-- Certifications & Business Classifications -->
+    <section class="certifications-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Certifications & Socioeconomic Classifications</h2>
+                <p>Verified supplier credentials for state procurement officers, municipal buyers, and institutional contracting officials.</p>
+            </div>
+            <div class="cert-grid">
+                <div class="cert-box">
+                    <h3>Commonwealth of Pennsylvania Certifications</h3>
+                    <ul class="cert-list">
+                        <li>
+                            <span>Small Business Certification (SB)</span>
+                            <span class="badge-verified">ID: 573044-2026-10-SB</span>
+                        </li>
+                        <li>
+                            <span>Micro Business Certification (MBC)</span>
+                            <span class="badge-verified">ID: 573044-2026-10-MBC</span>
+                        </li>
+                        <li>
+                            <span>PA Supplier Registration Number</span>
+                            <span class="badge-verified">0000573044</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cert-box">
+                    <h3>Business Ownership Classifications</h3>
+                    <ul class="cert-list">
+                        <li>
+                            <span>Minority Business Enterprise (MBE)</span>
+                            <span class="badge-verified">Self-Certified</span>
+                        </li>
+                        <li>
+                            <span>Small Disadvantaged Business (SDB)</span>
+                            <span class="badge-verified">Self-Certified</span>
+                        </li>
+                        <li>
+                            <span>Hispanic American-Owned Business</span>
+                            <span class="badge-verified">Verified</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="space-y-4">
-                <h4 class="text-lg font-semibold text-slate-200">Contracting & Procurement Inquiries</h4>
-                <p class="text-sm text-slate-400">
-                    For state solicitations, Invitation to Qualify (ITQ) contracts, sole-source evaluations, or institutional programming, reach out directly.
-                </p>
-                <div class="pt-2">
-                    <a href="mailto:axel@bluejayphenomenal.com" class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-xl transition shadow-md">
-                        Contact via axel@bluejayphenomenal.com
-                    </a>
+        </div>
+    </section>
+
+    <!-- Company Overview & Core Capabilities -->
+    <section id="overview" class="overview-section">
+        <div class="container overview-grid">
+            <div class="overview-text">
+                <h2>Institutional Profile & Service Scope</h2>
+                <p><strong>BlueJay Phenomenal Group, LLC</strong> delivers narrative-based educational programming, facilitated reflection, and lived-experience-informed leadership development for institutional environments.</p>
+                <p>Through its proprietary Mirror Reflection & Response Methodology (MRR), cinematic educational resources, and structured engagement models, BlueJay supports organizations working across juvenile justice, corrections, diversion, reentry, restorative justice, and community-based institutional systems.</p>
+                <p>Founded on June 1, 2018, and headquartered in Tobyhanna, Pennsylvania, the firm offers specialized consulting and educational services tailored to government agencies, public defenders, law schools, and institutional buyers.</p>
+            </div>
+            <div class="capabilities-grid">
+                <div class="capability-card">
+                    <h4>Narrative Educational Programming</h4>
+                    <p>Facilitated reflection labs and curriculum-driven workshops.</p>
                 </div>
+                <div class="capability-card">
+                    <h4>Juvenile Justice Development</h4>
+                    <p>Alternative-to-incarceration and youth-serving engagement.</p>
+                </div>
+                <div class="capability-card">
+                    <h4>Restorative Justice Education</h4>
+                    <p>Accountability-centered dialogue and community restoration.</p>
+                </div>
+                <div class="capability-card">
+                    <h4>Reentry & Transition Support</h4>
+                    <p>Identity reconstruction and forward-planning curricula.</p>
+                </div>
+                <div class="capability-card">
+                    <h4>Correctional Presentations</h4>
+                    <p>Institutional lectures and film-based workshops.</p>
+                </div>
+                <div class="capability-card">
+                    <h4>Methodology Development</h4>
+                    <p>Custom instructional design aligned with RNR principles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signature Methodology: MRR -->
+    <section id="methodology" class="mrr-section">
+        <div class="container">
+            <div class="mrr-intro">
+                <h2>Signature Methodology — Mirror Reflection & Response</h2>
+                <p>A proprietary four-part cognitive-behavioral framework designed to complement existing alternative-to-incarceration, juvenile justice, and reentry programming.</p>
+                <div class="mrr-quote">"I help people move from story to reflection to ownership to action."</div>
+            </div>
+            <div class="mrr-steps-grid">
+                <div class="mrr-step-card">
+                    <div class="step-num">01</div>
+                    <h3>THE MIRROR</h3>
+                    <p>Participants examine past experiences, choices, behavioral patterns, consequences, and personal narratives in a safe, guided space.</p>
+                </div>
+                <div class="mrr-step-card">
+                    <div class="step-num">02</div>
+                    <h3>THE PEN</h3>
+                    <p>Participants begin to take ownership of their personal narratives, recognizing their agency and capacity to shape future decisions.</p>
+                </div>
+                <div class="mrr-step-card">
+                    <div class="step-num">03</div>
+                    <h3>THE MIC</h3>
+                    <p>Participants develop authentic voice, emotional literacy, and confidence in articulating their perspectives to institutional leaders.</p>
+                </div>
+                <div class="mrr-step-card">
+                    <div class="step-num">04</div>
+                    <h3>THE VISION</h3>
+                    <p>Participants translate structured reflection into tangible goals, personal accountability, and a forward-looking action plan.</p>
+                </div>
+            </div>
+            <div class="progression-banner">
+                CENTRAL PROGRESSION: STORY &rarr; REFLECTION &rarr; OWNERSHIP &rarr; ACTION
+            </div>
+        </div>
+    </section>
+
+    <!-- Cinematic Catalyst -->
+    <section class="film-section">
+        <div class="container film-grid">
+            <div class="film-content">
+                <h2>Cinematic Catalyst — <em>Distorted Perception of Innocence</em></h2>
+                <p>At the center of BlueJay's educational programming is the autobiographical narrative film <em>Distorted Perception of Innocence</em>. Serving as a powerful cinematic catalyst, the film opens the door to facilitated dialogue and personal reflection.</p>
+                <div class="film-quote-box">
+                    "The film becomes the doorway. The reflection becomes the process. The dialogue becomes the learning."
+                </div>
+                <p>Utilized across juvenile justice facilities, university law schools, and alternative-to-incarceration programs, the film bridges lived experience with structured cognitive-behavioral engagement.</p>
+            </div>
+            <div class="film-poster-container">
+                <img src="MoviePoster16x24Low-Res12mb (1).jpg" alt="Distorted Perception of Innocence Movie Poster" onerror="this.style.display='none'">
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 1rem;">Official Educational Screening & Discussion Asset</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Institutional Applications -->
+    <section id="applications" class="applications-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Institutional Applications & Sectors Served</h2>
+                <p>Tailored engagement models designed for diverse legal, educational, and correctional environments.</p>
+            </div>
+            <div class="apps-grid">
+                <div class="app-card">
+                    <h3>Juvenile Justice</h3>
+                    <ul>
+                        <li>Alternative-to-incarceration programs</li>
+                        <li>Juvenile detention & placement facilities</li>
+                        <li>Youth development initiatives</li>
+                        <li>Educational engagement workshops</li>
+                    </ul>
+                </div>
+                <div class="app-card">
+                    <h3>Restorative Justice & Law</h3>
+                    <ul>
+                        <li>Restorative justice education</li>
+                        <li>Law school clinics & presentations</li>
+                        <li>Public defender training support</li>
+                        <li>Dialogue & accountability labs</li>
+                    </ul>
+                </div>
+                <div class="app-card">
+                    <h3>Reentry & Corrections</h3>
+                    <ul>
+                        <li>Transition-focused programming</li>
+                        <li>Reentry stabilization education</li>
+                        <li>Identity & accountability coaching</li>
+                        <li>Community reintegration support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Government Contracting & Procurement Readiness -->
+    <section id="procurement" class="procurement-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Government Contracting & Institutional Procurement</h2>
+                <p>BlueJay Phenomenal Group, LLC is structured to support government agencies, prime contractors, and institutional buyers seeking specialized educational and consulting services.</p>
+            </div>
+            <div class="procurement-table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Procurement Category</th>
+                            <th>Identifier / Detail</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Legal Business Name</strong></td>
+                            <td>BlueJay Phenomenal Group, LLC</td>
+                            <td>Registered LLC in Pennsylvania (Est. June 1, 2018)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>DBA</strong></td>
+                            <td>BlueJay Phenomenal Publishers</td>
+                            <td>Publishing & Educational Media Imprint</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Unique Entity ID (UEI)</strong></td>
+                            <td><code>EG6QRC8YPEK8</code></td>
+                            <td>Active Federal Contracting Registration</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CAGE Code</strong></td>
+                            <td><code>[VERIFIED CODE]</code></td>
+                            <td>Assigned CAGE Identifier</td>
+                        </tr>
+                        <tr>
+                            <td><strong>PA Supplier Number</strong></td>
+                            <td><code>0000573044</code></td>
+                            <td>Commonwealth of Pennsylvania SRM Vendor Profile</td>
+                        </tr>
+                        <tr>
+                            <td><strong>State Certifications</strong></td>
+                            <td>SB & MBC (573044-2026-10)</td>
+                            <td>Pennsylvania Small & Micro Business Certifications</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Category 1: NAICS Codes -->
+            <div class="classification-category-title">NAICS Codes (North American Industry Classification System)</div>
+            <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.9rem;"><em>Note: No primary NAICS code is designated until fully reconciled with active SAM.gov registration records.</em></p>
+            <div class="procurement-table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Official Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>541611</strong></td>
+                            <td>Administrative Management and General Management Consulting Services</td>
+                        </tr>
+                        <tr>
+                            <td><strong>611430</strong></td>
+                            <td>Professional and Management Development Training</td>
+                        </tr>
+                        <tr>
+                            <td><strong>611710</strong></td>
+                            <td>Educational Support Services</td>
+                        </tr>
+                        <tr>
+                            <td><strong>611699</strong></td>
+                            <td>All Other Miscellaneous Schools and Instruction</td>
+                        </tr>
+                        <tr>
+                            <td><strong>624190</strong></td>
+                            <td>Other Individual and Family Services</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Category 2: Federal Product Service Codes (PSC) -->
+            <div class="classification-category-title">Federal Product Service Codes (PSC)</div>
+            <div class="procurement-table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Official Federal Service Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>U008</strong></td>
+                            <td>Education/Training — Training/Curriculum Development</td>
+                        </tr>
+                        <tr>
+                            <td><strong>U099</strong></td>
+                            <td>Education/Training — Other</td>
+                        </tr>
+                        <tr>
+                            <td><strong>R408</strong></td>
+                            <td>Support — Professional: Program Management/Support Services</td>
+                        </tr>
+                        <tr>
+                            <td><strong>R499</strong></td>
+                            <td>Support — Professional: Other</td>
+                        </tr>
+                        <tr>
+                            <td><strong>G004</strong></td>
+                            <td>Social — Social Rehabilitation</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Category 3: Pennsylvania / UNSPSC Codes -->
+            <div class="classification-category-title">Pennsylvania / UNSPSC Classification Codes</div>
+            <div class="procurement-table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Classification Reference</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>86132100</strong></td>
+                            <td>Educational & Training Services / Specialized Instructional Services</td>
+                        </tr>
+                        <tr>
+                            <td><strong>80101500</strong></td>
+                            <td>Business and Corporate Management Consultation Services</td>
+                        </tr>
+                        <tr>
+                            <td><strong>60106000</strong></td>
+                            <td>Educational Materials and Media Products</td>
+                        </tr>
+                        <tr>
+                            <td><strong>86132200</strong></td>
+                            <td>Professional Development & Workforce Training Services</td>
+                        </tr>
+                        <tr>
+                            <td><strong>93141500</strong></td>
+                            <td>Community Action and Social Services Support</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="margin-top: 3rem;">
+                <h3 style="margin-bottom: 1rem; color: var(--gold-primary);">Available Institutional Documents & Resources</h3>
+                <div class="documents-list">
+                    <a href="METHODOLOGY_OVERVIEW.pdf" class="doc-link-btn" target="_blank">📄 MRR Methodology Overview</a>
+                    <a href="Educational_Film_Screening_&_Facilitated_Dialogue.pdf" class="doc-link-btn" target="_blank">🎬 Film Screening & Facilitated Dialogue Guide</a>
+                    <a href="The_Perspective_Series_Syllabus.pdf" class="doc-link-btn" target="_blank">📚 The Perspective Series Syllabus</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact">
+        <div class="container footer-content">
+            <h2>Procurement & Institutional Inquiries</h2>
+            <p>Connect with BlueJay Phenomenal Group to discuss institutional programming, educational services, procurement opportunities, and speaking engagements.</p>
+            <a href="mailto:axeldesarden7@gmail.com" class="contact-email">axeldesarden7@gmail.com</a>
+            <div style="margin-top: 2rem;">
+                <a href="#procurement" class="btn-procurement">View Procurement Data</a>
+            </div>
+            <div class="copyright">
+                &copy; 2018–2026 BlueJay Phenomenal Group, LLC. All Rights Reserved.<br>
+                Tobyhanna, Pennsylvania | Principal Consultant: Axel Desarden
             </div>
         </div>
     </footer>
