@@ -2,11 +2,2339 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="0; url=/justice.html" />
-  <link rel="canonical" href="https://bluejayphenomenal.com/justice.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BlueJay Phenomenal Group, LLC | Government Contracting &amp; Institutional Capabilities</title>
+  <meta name="description" content="Official Government Contracting and Institutional Capabilities profile for BlueJay Phenomenal Group, LLC (UEI: EG6QRC8YPEK8 | CAGE: 279D7). Pennsylvania Small &amp; Micro Business providing training facilitation, curriculum development, narrative-based educational programming, and institutional consulting." />
+  <style>
+    /* ==========================================================================
+       DESIGN SYSTEM & VARIABLES
+       ========================================================================== */
+    :root {
+      --navy-primary: #071B31;
+      --navy-secondary: #0A1228;
+      --navy-border: #173354;
+      --gold: #D4AF37;
+      --gold-light: #E8C96A;
+      --gold-muted: rgba(212, 175, 55, 0.14);
+      --white: #FFFFFF;
+      --bg-light: #F4F6F9;
+      --border-light: #DCE2EA;
+      --text-primary: #1C2938;
+      --text-muted: #64748B;
+      --success-bg: rgba(16, 185, 129, 0.15);
+      --success-text: #6EE7B7;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --max-width: 1240px;
+      --radius: 6px;
+      --shadow-sm: 0 1px 3px rgba(7, 27, 49, 0.08);
+      --shadow-md: 0 4px 14px rgba(7, 27, 49, 0.08);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--text-primary);
+      background-color: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img, video {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ==========================================================================
+       1. TOP FEDERAL REGISTRATION HEADER
+       ========================================================================== */
+    .federal-header {
+      background-color: var(--navy-secondary);
+      color: var(--white);
+      border-bottom: 3px solid var(--gold);
+      padding: 1.25rem 0;
+    }
+
+    .federal-header-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .entity-identity {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .entity-eyebrow {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+    }
+
+    .entity-name {
+      font-size: 1.65rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      color: var(--white);
+      line-height: 1.2;
+    }
+
+    .sam-status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: var(--success-bg);
+      border: 1px solid rgba(110, 231, 183, 0.35);
+      color: var(--success-text);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      padding: 0.25rem 0.65rem;
+      border-radius: 4px;
+      width: fit-content;
+      margin-top: 0.2rem;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #10B981;
+      border-radius: 50%;
+    }
+
+    .federal-identifiers {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: stretch;
+    }
+
+    .id-box {
+      background-color: var(--navy-primary);
+      border: 1px solid var(--navy-border);
+      border-left: 3px solid var(--gold);
+      padding: 0.65rem 1rem;
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      min-width: 210px;
+    }
+
+    .id-label {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gold-light);
+    }
+
+    .id-value {
+      font-family: var(--font-mono);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.04em;
+    }
+
+    .copy-btn {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: var(--white);
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.3rem 0.55rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .copy-btn:hover {
+      background: var(--gold);
+      color: var(--navy-secondary);
+      border-color: var(--gold);
+    }
+
+    /* ==========================================================================
+       STICKY NAVIGATION & UTILITY BAR
+       ========================================================================== */
+    .utility-bar {
+      background-color: var(--navy-primary);
+      color: var(--white);
+      border-bottom: 1px solid var(--navy-border);
+      font-size: 0.85rem;
+      padding: 0.5rem 0;
+    }
+
+    .utility-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .utility-contact {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .utility-contact a {
+      color: var(--white);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.15s ease;
+    }
+
+    .utility-contact a:hover {
+      color: var(--gold-light);
+    }
+
+    .btn-cap-top {
+      background-color: var(--gold);
+      color: var(--navy-secondary);
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.45rem 0.95rem;
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      transition: background-color 0.15s ease;
+    }
+
+    .btn-cap-top:hover {
+      background-color: var(--gold-light);
+    }
+
+    .main-nav {
+      background-color: var(--white);
+      border-bottom: 1px solid var(--border-light);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 54px;
+    }
+
+    .nav-list {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      gap: 0.25rem;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .nav-list a {
+      display: block;
+      padding: 0.85rem 0.65rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--navy-primary);
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .nav-list a:hover,
+    .nav-list a.active {
+      color: var(--navy-primary);
+      border-bottom-color: var(--gold);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border-light);
+      color: var(--navy-primary);
+      padding: 0.45rem 0.75rem;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+
+    /* ==========================================================================
+       POSITIONING BANNER
+       ========================================================================== */
+    .positioning-strip {
+      background-color: var(--bg-light);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1.5rem 0;
+    }
+
+    .positioning-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .positioning-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--navy-primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .positioning-services {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .positioning-motto {
+      border-left: 3px solid var(--gold);
+      padding-left: 1rem;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--navy-primary);
+      text-transform: uppercase;
+    }
+
+    /* ==========================================================================
+       2 & 3. EXECUTIVE PROFILE, PA CERTIFICATIONS & PROCUREMENT CLASSIFICATIONS
+       ========================================================================== */
+    .executive-profile-section {
+      padding: 3rem 0;
+      background-color: var(--white);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .profile-master-grid {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 2.25rem;
+      align-items: start;
+    }
+
+    .left-column-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    /* Principal Consultant Card */
+    .consultant-card {
+      background-color: var(--white);
+      border: 1px solid var(--border-light);
+      border-top: 4px solid var(--navy-primary);
+      border-radius: var(--radius);
+      padding: 1.75rem 1.5rem;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .portrait-wrapper {
+      width: 210px;
+      height: 210px;
+      margin: 0 auto 1.25rem auto;
+      border-radius: 50%;
+      border: 4px solid var(--gold);
+      padding: 4px;
+      background-color: var(--white);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+    }
+
+    .portrait-wrapper img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 18%;
+    }
+
+    .consultant-name {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--navy-primary);
+      margin-bottom: 0.2rem;
+    }
+
+    .consultant-role {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #8A6D1B;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.2rem;
+    }
+
+    .consultant-company {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* Official Registrations & PA Certifications Panel */
+    .registrations-panel {
+      background-color: var(--bg-light);
+      border: 1px solid var(--border-light);
+      border-top: 4px solid var(--gold);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .panel-header-sm {
+      font-size: 0.92rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--navy-primary);
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 0.65rem;
+      margin-bottom: 1rem;
+    }
+
+    .reg-group {
+      margin-bottom: 1.15rem;
+    }
+
+    .reg-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .reg-group-title {
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--navy-primary);
+      background-color: rgba(7, 27, 49, 0.06);
+      padding: 0.25rem 0.5rem;
+      border-radius: 3px;
+      margin-bottom: 0.6rem;
+    }
+
+    .reg-item {
+      display: flex;
+      flex-direction: column;
+      padding: 0.45rem 0;
+      border-bottom: 1px dashed var(--border-light);
+    }
+
+    .reg-item:last-child {
+      border-bottom: none;
+    }
+
+    .reg-label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .reg-code {
+      font-family: var(--font-mono);
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--navy-primary);
+    }
+
+    .reg-period {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .socioeconomic-note {
+      margin-top: 0.85rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border-light);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    /* Right Column: Procurement Classifications Panel */
+    .classifications-panel {
+      background-color: var(--white);
+      border: 1px solid var(--border-light);
+      border-top: 4px solid var(--navy-primary);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .classifications-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.5rem;
+      border-bottom: 2px solid var(--navy-primary);
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .classifications-header h2 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      color: var(--navy-primary);
+      text-transform: uppercase;
+    }
+
+    .classifications-sub {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .code-category-block {
+      margin-bottom: 1.65rem;
+    }
+
+    .code-category-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .category-banner {
+      background-color: var(--navy-primary);
+      color: var(--white);
+      padding: 0.55rem 0.9rem;
+      border-radius: 4px 4px 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .category-code-tag {
+      font-weight: 800;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      color: var(--gold-light);
+    }
+
+    .category-full-name {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .classification-table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--border-light);
+      border-top: none;
+    }
+
+    .classification-table tr {
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .classification-table tr:nth-child(even) {
+      background-color: var(--bg-light);
+    }
+
+    .classification-table td {
+      padding: 0.65rem 0.9rem;
+      vertical-align: top;
+      font-size: 0.92rem;
+    }
+
+    .classification-table td.code-col {
+      width: 125px;
+      font-family: var(--font-mono);
+      font-weight: 800;
+      color: var(--navy-primary);
+      border-right: 1px solid var(--border-light);
+      white-space: nowrap;
+    }
+
+    .classification-table td.desc-col {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    /* ==========================================================================
+       STANDARD SECTION STYLING
+       ========================================================================== */
+    .section {
+      padding: 4rem 0;
+    }
+
+    .section-alt {
+      background-color: var(--bg-light);
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .section-header {
+      margin-bottom: 2.25rem;
+    }
+
+    .section-eyebrow {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #8A6D1B;
+      margin-bottom: 0.35rem;
+    }
+
+    .section-title {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--navy-primary);
+      letter-spacing: 0.01em;
+      line-height: 1.25;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--border-light);
+      position: relative;
+    }
+
+    .section-title::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 84px;
+      height: 2px;
+      background-color: var(--gold);
+    }
+
+    /* ==========================================================================
+       5. COMPANY OVERVIEW
+       ========================================================================== */
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .overview-copy p {
+      font-size: 1.02rem;
+      color: var(--text-primary);
+      margin-bottom: 1.15rem;
+    }
+
+    .overview-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    .overview-media-card {
+      background-color: var(--bg-light);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .overview-media-card img {
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+    }
+
+    .media-caption {
+      padding: 0.85rem 1rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-light);
+      background-color: var(--white);
+    }
+
+    /* ==========================================================================
+       6. CORE COMPETENCIES & SERVICE OFFERINGS
+       ========================================================================== */
+    .competencies-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+    }
+
+    .service-card {
+      background-color: var(--white);
+      border: 1px solid var(--border-light);
+      border-top: 3px solid var(--navy-primary);
+      border-radius: var(--radius);
+      padding: 1.4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-sm);
+      transition: border-top-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .service-card:hover {
+      border-top-color: var(--gold);
+      box-shadow: var(--shadow-md);
+    }
+
+    .service-num {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: #8A6D1B;
+      margin-bottom: 0.4rem;
+    }
+
+    .service-card h3 {
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: var(--navy-primary);
+      margin-bottom: 0.6rem;
+      line-height: 1.35;
+    }
+
+    .service-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* ==========================================================================
+       7. PROPRIETARY MRR METHODOLOGY
+       ========================================================================== */
+    .mrr-intro {
+      max-width: 820px;
+      margin-bottom: 2rem;
+      font-size: 1.02rem;
+    }
+
+    .mrr-stages-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      margin-bottom: 2.25rem;
+    }
+
+    .mrr-stage-card {
+      background-color: var(--navy-primary);
+      color: var(--white);
+      border-radius: var(--radius);
+      padding: 1.6rem 1.4rem;
+      border-top: 4px solid var(--gold);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mrr-step-label {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--gold-light);
+      letter-spacing: 0.06em;
+      margin-bottom: 0.35rem;
+    }
+
+    .mrr-stage-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 0.35rem;
+    }
+
+    .mrr-stage-tagline {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      margin-bottom: 0.75rem;
+    }
+
+    .mrr-stage-desc {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.88);
+      line-height: 1.55;
+    }
+
+    .mrr-alignment-box {
+      background-color: var(--bg-light);
+      border: 1px solid var(--border-light);
+      border-left: 4px solid var(--navy-primary);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+
+    .mrr-alignment-box h3 {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--navy-primary);
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .principles-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.65rem 1.5rem;
+      list-style: none;
+      margin-bottom: 0.9rem;
+    }
+
+    .principles-list li {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .principles-list li::before {
+      content: "▪";
+      color: var(--gold);
+      font-size: 1.1rem;
+    }
+
+    .alignment-disclaimer {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       8 & 9. CINEMATIC EDUCATIONAL CATALYST & MEDIA ASSETS
+       ========================================================================== */
+    .catalyst-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .film-badge {
+      display: inline-block;
+      background-color: var(--navy-primary);
+      color: var(--gold-light);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.7rem;
+      border-radius: 4px;
+      margin-bottom: 0.75rem;
+    }
+
+    .film-title {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--navy-primary);
+      margin-bottom: 0.65rem;
+    }
+
+    .themes-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.45rem 1rem;
+      list-style: none;
+      margin: 1rem 0 1.5rem 0;
+      padding: 1rem;
+      background-color: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius);
+    }
+
+    .themes-grid li {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .themes-grid li::before {
+      content: "•";
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .delivery-flow {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 1.25rem 0;
+    }
+
+    .flow-node {
+      background-color: var(--navy-primary);
+      color: var(--white);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      padding: 0.55rem 0.8rem;
+      border-radius: 4px;
+      border-bottom: 2px solid var(--gold);
+    }
+
+    .flow-arrow {
+      font-weight: 800;
+      color: var(--navy-primary);
+      font-size: 1rem;
+    }
+
+    .positioning-quote {
+      border-left: 4px solid var(--gold);
+      background-color: var(--white);
+      padding: 1rem 1.25rem;
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--navy-primary);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .video-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .video-card {
+      background-color: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .video-card video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background-color: #000;
+    }
+
+    .video-label {
+      padding: 0.75rem 1rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--navy-primary);
+      border-top: 1px solid var(--border-light);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .video-label span {
+      font-weight: 500;
+      color: var(--text-muted);
+      font-size: 0.78rem;
+    }
+
+    /* ==========================================================================
+       10 & 11. INSTITUTIONAL EXPERIENCE & PENNSYLVANIA ITQ ALIGNMENT
+       ========================================================================== */
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .exp-card {
+      background-color: var(--white);
+      border: 1px solid var(--border-light);
+      border-top: 4px solid var(--navy-primary);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .exp-card-media {
+      width: 100%;
+      height: 195px;
+      object-fit: cover;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .exp-card-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .exp-date-tag {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #8A6D1B;
+      text-transform: uppercase;
+      margin-bottom: 0.35rem;
+    }
+
+    .exp-org {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--navy-primary);
+      margin-bottom: 0.2rem;
+    }
+
+    .exp-sub {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 0.9rem;
+    }
+
+    .exp-desc {
+      font-size: 0.92rem;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+    }
+
+    .exp-caps-title {
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--navy-primary);
+      margin-bottom: 0.5rem;
+      margin-top: auto;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .exp-caps-list {
+      list-style: none;
+      font-size: 0.86rem;
+      color: var(--text-primary);
+    }
+
+    .exp-caps-list li {
+      padding: 0.18rem 0;
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .exp-caps-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #8A6D1B;
+      font-weight: 800;
+    }
+
+    /* Institutional Activation Proof Video Bar */
+    .activation-proof-bar {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 2rem;
+      align-items: center;
+      background-color: var(--bg-light);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .activation-proof-bar video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 4px;
+      background-color: #000;
+    }
+
+    /* Pennsylvania ITQ Alignment Box */
+    .itq-panel {
+      background-color: var(--navy-primary);
+      color: var(--white);
+      border-radius: var(--radius);
+      padding: 2rem;
+      border-left: 5px solid var(--gold);
+    }
+
+    .itq-panel h3 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.75rem;
+    }
+
+    .itq-intro {
+      font-size: 0.94rem;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 1.25rem;
+    }
+
+    .itq-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 1.75rem;
+    }
+
+    .itq-codes-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .itq-codes-list li {
+      background-color: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 0.65rem 0.9rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+
+    .itq-codes-list strong {
+      font-family: var(--font-mono);
+      color: var(--gold-light);
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+
+    .itq-exp-list {
+      list-style: none;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.92);
+    }
+
+    .itq-exp-list li {
+      padding: 0.3rem 0 0.3rem 1.15rem;
+      position: relative;
+    }
+
+    .itq-exp-list li::before {
+      content: "▪";
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+    }
+
+    /* ==========================================================================
+       12. CAPABILITY STATEMENT & PROCUREMENT DOCUMENTATION
+       ========================================================================== */
+    .capability-box {
+      background-color: var(--white);
+      border: 2px solid var(--navy-primary);
+      border-radius: var(--radius);
+      padding: 2.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    .capability-info {
+      max-width: 680px;
+    }
+
+    .capability-info h3 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--navy-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .capability-info p {
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .doc-meta {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .btn-primary-download {
+      background-color: var(--navy-primary);
+      color: var(--white);
+      border: 2px solid var(--navy-primary);
+      padding: 0.95rem 1.65rem;
+      border-radius: var(--radius);
+      font-weight: 700;
+      font-size: 0.92rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .btn-primary-download:hover {
+      background-color: var(--navy-secondary);
+      border-color: var(--gold);
+    }
+
+    /* ==========================================================================
+       4. CONTACT SECTION & FOOTER
+       ========================================================================== */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 2.5rem;
+    }
+
+    .contact-details-card {
+      background-color: var(--bg-light);
+      border: 1px solid var(--border-light);
+      border-top: 4px solid var(--gold);
+      border-radius: var(--radius);
+      padding: 2rem;
+    }
+
+    .contact-details-card h3 {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--navy-primary);
+      margin-bottom: 1rem;
+    }
+
+    .contact-row {
+      margin-bottom: 1.15rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .contact-row:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .contact-row-label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-row-value {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy-primary);
+    }
+
+    .contact-row-value a:hover {
+      text-decoration: underline;
+      color: #8A6D1B;
+    }
+
+    .inquiry-form-card {
+      background-color: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .inquiry-form-card h3 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--navy-primary);
+      margin-bottom: 0.4rem;
+    }
+
+    .inquiry-form-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--navy-primary);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.65rem 0.8rem;
+      border: 1px solid var(--border-light);
+      border-radius: 4px;
+      font-family: var(--font-sans);
+      font-size: 0.92rem;
+      color: var(--text-primary);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--navy-primary);
+    }
+
+    .btn-submit-inquiry {
+      background-color: var(--navy-primary);
+      color: var(--white);
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background-color 0.15s ease;
+    }
+
+    .btn-submit-inquiry:hover {
+      background-color: var(--navy-secondary);
+    }
+
+    /* Footer */
+    .site-footer {
+      background-color: var(--navy-secondary);
+      color: rgba(255, 255, 255, 0.85);
+      border-top: 3px solid var(--gold);
+      padding: 3rem 0 2rem 0;
+      font-size: 0.88rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--navy-border);
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-brand h4 {
+      color: var(--white);
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-ids {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--gold-light);
+      margin-top: 0.65rem;
+      line-height: 1.6;
+    }
+
+    .footer-heading {
+      color: var(--gold-light);
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    /* ==========================================================================
+       RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 1080px) {
+      .profile-master-grid {
+        grid-template-columns: 1fr;
+      }
+      .left-column-stack {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+      }
+      .competencies-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .mrr-stages-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .experience-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .overview-grid,
+      .catalyst-grid,
+      .activation-proof-bar,
+      .itq-grid,
+      .contact-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .mobile-menu-toggle {
+        display: block;
+      }
+
+      .nav-list {
+        display: none;
+        flex-direction: column;
+        padding: 0.5rem 0 1rem 0;
+      }
+
+      .nav-list.open {
+        display: flex;
+      }
+
+      .nav-list a {
+        padding: 0.65rem 0;
+      }
+
+      .principles-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .left-column-stack,
+      .competencies-grid,
+      .mrr-stages-grid,
+      .themes-grid,
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .entity-name {
+        font-size: 1.35rem;
+      }
+
+      .id-box {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-  <script>window.location.replace("/justice.html");</script>
+
+  <!-- ========================================================================
+       1. TOP FEDERAL REGISTRATION HEADER
+       ======================================================================== -->
+  <header class="federal-header" role="banner">
+    <div class="container federal-header-grid">
+      <div class="entity-identity">
+        <span class="entity-eyebrow">Federal &amp; Institutional Contracting Profile</span>
+        <h1 class="entity-name">BlueJay Phenomenal Group, LLC</h1>
+        <div class="sam-status-badge" aria-label="SAM.gov Registration Status">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>SAM.gov Registration: REGISTERED &amp; ACTIVE</span>
+        </div>
+      </div>
+
+      <div class="federal-identifiers" aria-label="Federal Entity Identifiers">
+        <div class="id-box">
+          <div>
+            <span class="id-label">Unique Entity ID (UEI)</span>
+            <span class="id-value" id="uei-val">EG6QRC8YPEK8</span>
+          </div>
+          <button type="button" class="copy-btn" data-copy="EG6QRC8YPEK8" aria-label="Copy UEI">Copy</button>
+        </div>
+
+        <div class="id-box">
+          <div>
+            <span class="id-label">CAGE Code</span>
+            <span class="id-value" id="cage-val">279D7</span>
+          </div>
+          <button type="button" class="copy-btn" data-copy="279D7" aria-label="Copy CAGE Code">Copy</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Direct Procurement Contact & Capability Statement Bar -->
+  <div class="utility-bar">
+    <div class="container utility-inner">
+      <div class="utility-contact">
+        <a href="mailto:axel@bluejayphenomenal.com">
+          <strong>Email:</strong> axel@bluejayphenomenal.com
+        </a>
+        <a href="tel:+13477655676">
+          <strong>Tel:</strong> (347) 765-5676
+        </a>
+        <span><strong>Location:</strong> Tobyhanna, PA (Monroe County)</span>
+      </div>
+      <a href="BlueJay%20Phenomenal%20Group%2C%20LLC%20-%20Capability%20Statement.pdf" download class="btn-cap-top">
+        Download Official Capability Statement
+      </a>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       13. NAVIGATION BAR
+       ======================================================================== -->
+  <nav class="main-nav" aria-label="Primary Site Navigation">
+    <div class="container nav-container">
+      <button type="button" class="mobile-menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="primary-nav-list">
+        Menu ☰
+      </button>
+      <ul class="nav-list" id="primary-nav-list">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#capabilities">Company Capabilities</a></li>
+        <li><a href="#classifications">Procurement Classifications</a></li>
+        <li><a href="#methodology">MRR Methodology</a></li>
+        <li><a href="#catalyst">Cinematic Catalyst</a></li>
+        <li><a href="#experience">Institutional Experience</a></li>
+        <li><a href="#capability-statement">Capability Statement</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Central Positioning Strip -->
+  <div class="positioning-strip">
+    <div class="container positioning-grid">
+      <div>
+        <div class="positioning-title">Government &amp; Institutional Capabilities</div>
+        <div class="positioning-services">Training. Educational Programming. Facilitation. Curriculum Support. Institutional Consulting.</div>
+      </div>
+      <div class="positioning-motto">
+        From Story to Reflection.<br />
+        From Reflection to Action.
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ======================================================================
+         2 & 3. PRINCIPAL CONSULTANT PROFILE, PA CERTIFICATIONS & CLASSIFICATIONS
+         ====================================================================== -->
+    <section class="executive-profile-section" id="classifications" aria-labelledby="classifications-heading">
+      <div class="container profile-master-grid">
+        
+        <!-- LEFT COLUMN: Portrait & Government Registrations -->
+        <div class="left-column-stack">
+          <!-- Principal Consultant Portrait -->
+          <div class="consultant-card">
+            <div class="portrait-wrapper">
+              <img src="Principal_Consultant_Liaison.jpg" alt="Axel Desarden, Principal Consultant of BlueJay Phenomenal Group, LLC" />
+            </div>
+            <h2 class="consultant-name">Axel Desarden</h2>
+            <div class="consultant-role">Principal Consultant</div>
+            <div class="consultant-company">BlueJay Phenomenal Group, LLC</div>
+          </div>
+
+          <!-- Government Registrations & Pennsylvania Certifications -->
+          <aside class="registrations-panel" aria-labelledby="reg-panel-heading">
+            <h3 class="panel-header-sm" id="reg-panel-heading">Government Registrations &amp; Pennsylvania Certifications</h3>
+
+            <div class="reg-group">
+              <div class="reg-group-title">Federal Registration</div>
+              <div class="reg-item">
+                <span class="reg-label">Unique Entity ID (UEI)</span>
+                <span class="reg-code">EG6QRC8YPEK8</span>
+              </div>
+              <div class="reg-item">
+                <span class="reg-label">CAGE Code</span>
+                <span class="reg-code">279D7</span>
+              </div>
+            </div>
+
+            <div class="reg-group">
+              <div class="reg-group-title">Commonwealth of Pennsylvania</div>
+              <div class="reg-item">
+                <span class="reg-label">Service Provider Registration Number</span>
+                <span class="reg-code">0000573044</span>
+              </div>
+              <div class="reg-item">
+                <span class="reg-label">SBA – Small Business</span>
+                <span class="reg-code">ID: 573044-2026-10-SB</span>
+              </div>
+              <div class="reg-item">
+                <span class="reg-label">MBC – Micro Business</span>
+                <span class="reg-code">ID: 573044-2026-10-MBC</span>
+              </div>
+              <div class="reg-item">
+                <span class="reg-label">PA Certification Period</span>
+                <span class="reg-period">October 23, 2026 – October 23, 2028</span>
+              </div>
+            </div>
+
+            <div class="socioeconomic-note">
+              <strong>Socioeconomic Profile:</strong> Certified PA Small Business &amp; Micro Business. Self-represented Small Business, Small Disadvantaged Business (SDB), and Hispanic Minority Business Enterprise (MBE).
+            </div>
+          </aside>
+        </div>
+
+        <!-- RIGHT COLUMN: Procurement Classifications -->
+        <div class="classifications-panel">
+          <div class="classifications-header">
+            <h2 id="classifications-heading">Procurement Classifications</h2>
+            <span class="classifications-sub">NAICS • PSC • UNSPSC</span>
+          </div>
+
+          <!-- A. NAICS -->
+          <div class="code-category-block">
+            <div class="category-banner">
+              <span class="category-code-tag">A. NAICS</span>
+              <span class="category-full-name">North American Industry Classification System</span>
+            </div>
+            <table class="classification-table" aria-label="NAICS Codes">
+              <tbody>
+                <tr>
+                  <td class="code-col">541611</td>
+                  <td class="desc-col">Administrative Management and General Management Consulting Services</td>
+                </tr>
+                <tr>
+                  <td class="code-col">611430</td>
+                  <td class="desc-col">Professional and Management Development Training</td>
+                </tr>
+                <tr>
+                  <td class="code-col">611710</td>
+                  <td class="desc-col">Educational Support Services</td>
+                </tr>
+                <tr>
+                  <td class="code-col">611699</td>
+                  <td class="desc-col">All Other Miscellaneous Schools and Instruction</td>
+                </tr>
+                <tr>
+                  <td class="code-col">624190</td>
+                  <td class="desc-col">Other Individual and Family Services</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- B. PSC -->
+          <div class="code-category-block">
+            <div class="category-banner">
+              <span class="category-code-tag">B. PSC</span>
+              <span class="category-full-name">Product Service Codes</span>
+            </div>
+            <table class="classification-table" aria-label="Product Service Codes">
+              <tbody>
+                <tr>
+                  <td class="code-col">U008</td>
+                  <td class="desc-col">Training/Curriculum Development</td>
+                </tr>
+                <tr>
+                  <td class="code-col">U099</td>
+                  <td class="desc-col">Other Education and Training Services</td>
+                </tr>
+                <tr>
+                  <td class="code-col">R408</td>
+                  <td class="desc-col">Program Management/Support Services</td>
+                </tr>
+                <tr>
+                  <td class="code-col">G004</td>
+                  <td class="desc-col">Social Rehabilitation Services</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- C. UNSPSC -->
+          <div class="code-category-block">
+            <div class="category-banner">
+              <span class="category-code-tag">C. UNSPSC</span>
+              <span class="category-full-name">United Nations Standard Products and Services Code</span>
+            </div>
+            <table class="classification-table" aria-label="UNSPSC Codes">
+              <tbody>
+                <tr>
+                  <td class="code-col">86132100</td>
+                  <td class="desc-col">Training Planning, Facilitation &amp; Delivery</td>
+                </tr>
+                <tr>
+                  <td class="code-col">80101500</td>
+                  <td class="desc-col">Business &amp; Corporate Management Consultation</td>
+                </tr>
+                <tr>
+                  <td class="code-col">60106000</td>
+                  <td class="desc-col">Curriculum Guides, Projects, Activities &amp; Lessons</td>
+                </tr>
+                <tr>
+                  <td class="code-col">86132200</td>
+                  <td class="desc-col">Educational Support Services</td>
+                </tr>
+                <tr>
+                  <td class="code-col">93141500</td>
+                  <td class="desc-col">Social Services</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. INSTITUTIONAL CAPABILITIES & COMPANY OVERVIEW
+         ====================================================================== -->
+    <section class="section section-alt" id="overview" aria-labelledby="overview-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Organization Profile</span>
+          <h2 class="section-title" id="overview-heading">Institutional Capabilities &amp; Company Overview</h2>
+        </div>
+
+        <div class="overview-grid">
+          <div class="overview-copy">
+            <p>
+              BlueJay Phenomenal Group, LLC is a Pennsylvania-based specialized professional services provider offering training facilitation, narrative-based educational programming, curriculum development, reentry education, behavioral engagement, and institutional consulting.
+            </p>
+            <p>
+              The company develops and delivers structured educational experiences designed to support reflection, accountability, decision-making, and personal development across youth-serving, justice-focused, educational, and institutional environments.
+            </p>
+            <p>
+              BlueJay integrates original narrative film, the proprietary Mirror Reflection &amp; Response (MRR) Methodology, facilitated dialogue, and evidence-aligned educational frameworks.
+            </p>
+            <p>
+              Its programming is adaptable to juvenile justice, alternative-to-incarceration initiatives, restorative justice, detention and residential settings, corrections, reentry, and institutional education.
+            </p>
+            <p>
+              <strong>BlueJay's approach complements existing institutional programs and services.</strong>
+            </p>
+          </div>
+
+          <div class="overview-media-card">
+            <img src="bluejay-strategy-session.png" alt="BlueJay Phenomenal Group institutional program planning and strategy session" loading="lazy" />
+            <div class="media-caption">
+              Structured program design, curriculum alignment, and institutional consultation supporting justice, educational, and public-sector agencies.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. CORE COMPETENCIES & SERVICE OFFERINGS
+         ====================================================================== -->
+    <section class="section" id="capabilities" aria-labelledby="capabilities-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Defined Service Lines</span>
+          <h2 class="section-title" id="capabilities-heading">Core Competencies &amp; Service Offerings</h2>
+        </div>
+
+        <div class="competencies-grid">
+          <article class="service-card">
+            <div>
+              <div class="service-num">CAPABILITY 01</div>
+              <h3>Training Planning, Facilitation &amp; Delivery</h3>
+              <p>Structured educational programming, workshops, training sessions, and guided learning experiences.</p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div>
+              <div class="service-num">CAPABILITY 02</div>
+              <h3>Curriculum Development &amp; Educational Support</h3>
+              <p>Development of reflection-driven educational content, instructional modules, and supporting learning materials.</p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div>
+              <div class="service-num">CAPABILITY 03</div>
+              <h3>Film-Based Educational Programming</h3>
+              <p>Use of original narrative film as an educational catalyst for structured reflection and facilitated institutional dialogue.</p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div>
+              <div class="service-num">CAPABILITY 04</div>
+              <h3>Behavioral Engagement &amp; Reflection</h3>
+              <p>Guided examination of decision-making, behavioral patterns, accountability, personal responsibility, and pro-social development.</p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div>
+              <div class="service-num">CAPABILITY 05</div>
+              <h3>Juvenile Justice &amp; Alternative-to-Incarceration Programming</h3>
+              <p>Educational engagement and facilitated reflection for youth-serving and justice-involved populations.</p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div>
+              <div class="service-num">CAPABILITY 06</div>
+              <h3>Reentry &amp; Corrections Education</h3>
+              <p>Narrative-based educational programming and structured reflection supporting reentry preparation, personal development, and institutional engagement.</p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div>
+              <div class="service-num">CAPABILITY 07</div>
+              <h3>Restorative Justice Education</h3>
+              <p>Facilitated discussion, narrative engagement, accountability, and reflection supporting restorative justice learning environments.</p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div>
+              <div class="service-num">CAPABILITY 08</div>
+              <h3>Management &amp; Program Consulting</h3>
+              <p>Consultation supporting institutional program development, educational engagement strategies, and program implementation.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. PROPRIETARY MRR METHODOLOGY
+         ====================================================================== -->
+    <section class="section section-alt" id="methodology" aria-labelledby="methodology-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Proprietary Methodology</span>
+          <h2 class="section-title" id="methodology-heading">Mirror Reflection &amp; Response (MRR)</h2>
+        </div>
+
+        <p class="mrr-intro">
+          Mirror Reflection &amp; Response (MRR) is a four-part reflective educational methodology developed by Axel Desarden. Designed for institutional classrooms, workshops, and facilitated group learning, MRR guides participants through a structured progression from personal awareness to accountable action.
+        </p>
+
+        <div class="mrr-stages-grid">
+          <div class="mrr-stage-card">
+            <span class="mrr-step-label">01 — THE MIRROR</span>
+            <h3 class="mrr-stage-title">See the Story</h3>
+            <div class="mrr-stage-tagline">Awareness &amp; Pattern Recognition</div>
+            <p class="mrr-stage-desc">Recognize impact, behavioral patterns, environmental influences, and root experiences.</p>
+          </div>
+
+          <div class="mrr-stage-card">
+            <span class="mrr-step-label">02 — THE PEN</span>
+            <h3 class="mrr-stage-title">Explore Choices</h3>
+            <div class="mrr-stage-tagline">Narrative Reframing &amp; Decision Analysis</div>
+            <p class="mrr-stage-desc">Develop empowering narratives, examine personal decisions, and consider alternative responses.</p>
+          </div>
+
+          <div class="mrr-stage-card">
+            <span class="mrr-step-label">03 — THE MIC</span>
+            <h3 class="mrr-stage-title">Reclaim Voice</h3>
+            <div class="mrr-stage-tagline">Agency &amp; Accountable Expression</div>
+            <p class="mrr-stage-desc">Build agency, communication, confidence, and accountability.</p>
+          </div>
+
+          <div class="mrr-stage-card">
+            <span class="mrr-step-label">04 — THE VISION</span>
+            <h3 class="mrr-stage-title">Turn Insight into Action</h3>
+            <div class="mrr-stage-tagline">Behavioral Ownership &amp; Planning</div>
+            <p class="mrr-stage-desc">Translate reflection into practical goals, behavioral ownership, and a forward-looking roadmap.</p>
+          </div>
+        </div>
+
+        <div class="mrr-alignment-box">
+          <h3>Evidence-Aligned Educational Principles</h3>
+          <ul class="principles-list">
+            <li>Risk-Need-Responsivity (RNR)</li>
+            <li>Cognitive Behavioral Intervention (CBI)</li>
+            <li>Reflective learning</li>
+            <li>Narrative engagement</li>
+            <li>Accountability</li>
+            <li>Pro-social decision-making</li>
+          </ul>
+          <p class="alignment-disclaimer">
+            MRR incorporates these evidence-aligned principles to structure educational engagement and complement established institutional programs. MRR is an educational and reflective facilitation methodology and does not constitute clinical therapy or medical treatment.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         8 & 9. CINEMATIC EDUCATIONAL CATALYST & VIDEO ASSETS
+         ====================================================================== -->
+    <section class="section" id="catalyst" aria-labelledby="catalyst-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Cinematic Educational Catalyst</span>
+          <h2 class="section-title" id="catalyst-heading">Distorted Perception of Innocence</h2>
+        </div>
+
+        <div class="catalyst-grid">
+          <div>
+            <span class="film-badge">Featured Educational Catalyst • 40-Minute Narrative Film</span>
+            <h3 class="film-title">Structured Film-to-Dialogue Delivery Model</h3>
+            <p>
+              <em>Distorted Perception of Innocence</em> is an original 40-minute autobiographical narrative film written and developed by Axel Desarden. Within BlueJay's institutional programming, the film is deployed strictly as an educational engagement catalyst rather than standalone entertainment—creating a shared reference point that lowers participant resistance and initiates structured inquiry.
+            </p>
+
+            <ul class="themes-grid" aria-label="Core Educational Themes Explored">
+              <li>Trauma adaptation</li>
+              <li>Identity development</li>
+              <li>Environmental influences</li>
+              <li>Personal choices</li>
+              <li>Decision-making</li>
+              <li>Accountability</li>
+              <li>Resilience</li>
+              <li>Personal transformation</li>
+            </ul>
+
+            <div class="delivery-flow" aria-label="Educational Delivery Sequence">
+              <span class="flow-node">FILM SCREENING</span>
+              <span class="flow-arrow" aria-hidden="true">→</span>
+              <span class="flow-node">FACILITATED REFLECTION</span>
+              <span class="flow-arrow" aria-hidden="true">→</span>
+              <span class="flow-node">STRUCTURED DIALOGUE</span>
+              <span class="flow-arrow" aria-hidden="true">→</span>
+              <span class="flow-node">EDUCATIONAL APPLICATION</span>
+            </div>
+
+            <blockquote class="positioning-quote">
+              "The film becomes the doorway. The reflection becomes the process. The dialogue becomes the learning."
+            </blockquote>
+          </div>
+
+          <div class="video-stack">
+            <div class="video-card">
+              <video controls preload="metadata" poster="principal-consultant-engagement.jpg">
+                <source src="Cinematic_Catalyst_Overview.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div class="video-label">
+                Cinematic Catalyst Overview
+                <span>Programmatic Integration</span>
+              </div>
+            </div>
+
+            <div class="video-card">
+              <video controls preload="metadata" poster="engagement.2.png">
+                <source src="Educational_Film_Screening_&_Facilitated_Dialogue.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div class="video-label">
+                Educational Film Screening &amp; Facilitated Dialogue
+                <span>Delivery Model</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         10 & 11. INSTITUTIONAL EXPERIENCE & PENNSYLVANIA ITQ ALIGNMENT
+         ====================================================================== -->
+    <section class="section section-alt" id="experience" aria-labelledby="experience-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Demonstrated Institutional Engagement</span>
+          <h2 class="section-title" id="experience-heading">Relevant Institutional Experience &amp; Demonstrated Performance</h2>
+        </div>
+
+        <div class="experience-grid">
+          <!-- A. AVENUES FOR JUSTICE -->
+          <article class="exp-card">
+            <img src="principal-consultant-engagement.jpg" alt="Facilitated learning session with Avenues for Justice" class="exp-card-media" loading="lazy" />
+            <div class="exp-card-body">
+              <span class="exp-date-tag">September 2025</span>
+              <h3 class="exp-org">Avenues for Justice</h3>
+              <div class="exp-sub">Alternative-to-Incarceration Program</div>
+              <p class="exp-desc">
+                BlueJay provided criminal-justice-related training and facilitated learning using the Mirror Reflection &amp; Response (MRR) Methodology, cognitive-behavioral principles (CBI), and Risk-Need-Responsivity (RNR) alignment. The engagement included structured, trauma-informed sessions designed to help justice-involved participants examine behavioral patterns, personal accountability, and pro-social decision-making.
+              </p>
+              <div class="exp-caps-title">Relevant Capabilities Demonstrated</div>
+              <ul class="exp-caps-list">
+                <li>Criminal justice educational programming</li>
+                <li>Alternative-to-incarceration engagement</li>
+                <li>Facilitated reflection</li>
+                <li>Behavioral accountability</li>
+                <li>Structured educational delivery</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- B. CAMPBELL UNIVERSITY -->
+          <article class="exp-card">
+            <img src="group.jpg" alt="Educational presentation and discussion at Campbell University School of Law" class="exp-card-media" loading="lazy" />
+            <div class="exp-card-body">
+              <span class="exp-date-tag">October 2026</span>
+              <h3 class="exp-org">Campbell University</h3>
+              <div class="exp-sub">Norman Adrian Wiggins School of Law — Restorative Justice Clinic</div>
+              <p class="exp-desc">
+                BlueJay delivered an invited educational presentation and facilitated discussion for Campbell University's Restorative Justice Clinic exploring narrative-based intervention, human behavior, accountability, restorative approaches, and reflection and educational engagement.
+              </p>
+              <div class="exp-caps-title">Relevant Capabilities Demonstrated</div>
+              <ul class="exp-caps-list">
+                <li>Institutional educational presentations</li>
+                <li>Restorative justice education</li>
+                <li>Facilitated dialogue</li>
+                <li>Narrative-based learning</li>
+                <li>Professional engagement with law students and practitioners</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- C. ABINGTON SENIOR HIGH SCHOOL -->
+          <article class="exp-card">
+            <img src="connection.jpg" alt="Youth development and prevention education workshop at Abington Senior High School" class="exp-card-media" loading="lazy" />
+            <div class="exp-card-body">
+              <span class="exp-date-tag">2021 – 2024</span>
+              <h3 class="exp-org">Abington Senior High School</h3>
+              <div class="exp-sub">Friends Against Alcohol and Drugs (FAAD)</div>
+              <p class="exp-desc">
+                BlueJay's principal designed and delivered health-focused substance-misuse prevention education and youth development programming through Abington Senior High School's Friends Against Alcohol and Drugs (FAAD) Program. Workshops addressed substance-use awareness, risk reduction, decision-making, emotional literacy, and resilience.
+              </p>
+              <div class="exp-caps-title">Relevant Capabilities Demonstrated</div>
+              <ul class="exp-caps-list">
+                <li>School-based educational programming</li>
+                <li>Youth development</li>
+                <li>Prevention education</li>
+                <li>Workshop facilitation</li>
+                <li>Interactive learning</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <!-- Institutional Activation Video Proof -->
+        <div class="activation-proof-bar">
+          <div>
+            <span class="section-eyebrow">Field Documentation</span>
+            <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--navy-primary); margin-bottom: 0.5rem;">Institutional Activation &amp; Facilitation</h3>
+            <p style="font-size: 0.92rem; color: var(--text-primary);">
+              Overview of BlueJay Phenomenal Group's structured facilitation approach in educational, restorative justice, and youth-serving institutional settings.
+            </p>
+          </div>
+          <div>
+            <video controls preload="metadata" poster="principal-consultant-network.jpg">
+              <source src="Institutional_Activation_Proof.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        <!-- Pennsylvania ITQ Experience & Procurement Alignment -->
+        <div class="itq-panel">
+          <h3>Pennsylvania ITQ Experience &amp; Procurement Alignment</h3>
+          <p class="itq-intro">
+            BlueJay Phenomenal Group, LLC's service capabilities align directly with Commonwealth of Pennsylvania Invitation to Qualify (ITQ) service categories for criminal justice and health-focused educational training:
+          </p>
+          <div class="itq-grid">
+            <div>
+              <ul class="itq-codes-list">
+                <li>
+                  <strong>86000000-ITQ-328</strong>
+                  Training Services - Criminal Justice - DGS Certified Small Business Only
+                </li>
+                <li>
+                  <strong>86000000-ITQ-329</strong>
+                  Training Services - Health - DGS Certified Small Business Only
+                </li>
+                <li>
+                  <strong>86000000-ITQ-79</strong>
+                  Training Services - Health
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div style="font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gold-light); margin-bottom: 0.5rem;">
+                Relevant Demonstrated Experience
+              </div>
+              <ul class="itq-exp-list">
+                <li>Criminal-justice-related training and facilitated learning</li>
+                <li>Health-focused substance-misuse prevention education</li>
+                <li>Youth development programming</li>
+                <li>Curriculum and educational content development</li>
+                <li>Structured facilitated reflection</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         12. CAPABILITY STATEMENT & PROCUREMENT DOCUMENTATION
+         ====================================================================== -->
+    <section class="section" id="capability-statement" aria-labelledby="cap-statement-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Official Procurement Documentation</span>
+          <h2 class="section-title" id="cap-statement-heading">Capability Statement &amp; Procurement Documentation</h2>
+        </div>
+
+        <div class="capability-box">
+          <div class="capability-info">
+            <h3>BlueJay Phenomenal Group, LLC — Official Capability Statement</h3>
+            <p>
+              Download the complete, single-file institutional Capability Statement containing federal entity registration details (UEI &amp; CAGE), Pennsylvania Small Business and Micro Business certification numbers, verified NAICS/PSC/UNSPSC codes, core competencies, and relevant institutional experience.
+            </p>
+            <div class="doc-meta">
+              Document: BlueJay Phenomenal Group, LLC - Capability Statement.pdf • Direct Public Access (No Login Required)
+            </div>
+          </div>
+
+          <div>
+            <a href="BlueJay%20Phenomenal%20Group%2C%20LLC%20-%20Capability%20Statement.pdf" download class="btn-primary-download">
+              Download Official Capability Statement (PDF)
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. OFFICIAL BUSINESS CONTACT INFORMATION
+         ====================================================================== -->
+    <section class="section section-alt" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Procurement &amp; Contracting Inquiries</span>
+          <h2 class="section-title" id="contact-heading">Official Business Contact Information</h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-details-card">
+            <h3>Primary Point of Contact</h3>
+            <div class="contact-row">
+              <span class="contact-row-label">Legal Business Name</span>
+              <span class="contact-row-value">BlueJay Phenomenal Group, LLC</span>
+            </div>
+            <div class="contact-row">
+              <span class="contact-row-label">Principal Consultant</span>
+              <span class="contact-row-value">Axel Desarden</span>
+            </div>
+            <div class="contact-row">
+              <span class="contact-row-label">Primary Business Email</span>
+              <span class="contact-row-value">
+                <a href="mailto:axel@bluejayphenomenal.com">axel@bluejayphenomenal.com</a>
+              </span>
+            </div>
+            <div class="contact-row">
+              <span class="contact-row-label">Business Telephone</span>
+              <span class="contact-row-value">
+                <a href="tel:+13477655676">(347) 765-5676</a>
+              </span>
+            </div>
+            <div class="contact-row">
+              <span class="contact-row-label">Business Location</span>
+              <span class="contact-row-value">Tobyhanna, Pennsylvania (Monroe County)</span>
+            </div>
+          </div>
+
+          <div class="inquiry-form-card">
+            <h3>Direct Procurement &amp; Institutional Inquiry</h3>
+            <p>Submit solicitation details, subcontracting inquiries, or institutional programming requests directly to BlueJay Phenomenal Group, LLC.</p>
+            <form id="procurement-inquiry-form">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="inq-name">Full Name &amp; Title *</label>
+                  <input type="text" id="inq-name" name="name" required placeholder="e.g., Jane Doe, Contracting Officer" />
+                </div>
+                <div class="form-group">
+                  <label for="inq-org">Agency / Institution / Company *</label>
+                  <input type="text" id="inq-org" name="organization" required placeholder="Agency or Organization Name" />
+                </div>
+                <div class="form-group">
+                  <label for="inq-email">Official Email Address *</label>
+                  <input type="email" id="inq-email" name="email" required placeholder="name@agency.gov" />
+                </div>
+                <div class="form-group">
+                  <label for="inq-type">Inquiry Category</label>
+                  <select id="inq-type" name="type">
+                    <option value="Federal / State Procurement">Federal / State / Local Procurement</option>
+                    <option value="Prime / Subcontracting Teaming">Prime / Subcontracting Partnering</option>
+                    <option value="Training & Workshop Delivery">Training &amp; Workshop Delivery</option>
+                    <option value="Curriculum & Program Consulting">Curriculum &amp; Program Consulting</option>
+                    <option value="University / Restorative Justice Clinic">University / Restorative Justice Engagement</option>
+                  </select>
+                </div>
+                <div class="form-group full-width">
+                  <label for="inq-message">Scope of Requirement / Solicitation Details *</label>
+                  <textarea id="inq-message" name="message" rows="4" required placeholder="Include solicitation number (if applicable), target population, or institutional requirements..."></textarea>
+                </div>
+                <div class="form-group full-width">
+                  <button type="submit" class="btn-submit-inquiry">Compose Email to axel@bluejayphenomenal.com</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       16. PROFESSIONAL FOOTER
+       ======================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>BlueJay Phenomenal Group, LLC</h4>
+          <p>Specialized professional services provider delivering training facilitation, narrative-based educational programming, curriculum development, and institutional consulting.</p>
+          <div class="footer-ids">
+            SAM.gov: REGISTERED &amp; ACTIVE<br />
+            UEI: EG6QRC8YPEK8 | CAGE: 279D7<br />
+            PA Service Provider Reg. No.: 0000573044
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-heading">Capabilities Navigation</div>
+          <ul class="footer-links">
+            <li><a href="#overview">Company Overview</a></li>
+            <li><a href="#capabilities">Core Competencies</a></li>
+            <li><a href="#classifications">Procurement Classifications</a></li>
+            <li><a href="#methodology">MRR Methodology</a></li>
+            <li><a href="#catalyst">Cinematic Educational Catalyst</a></li>
+            <li><a href="#experience">Institutional Experience</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Official Contact</div>
+          <ul class="footer-links">
+            <li><a href="mailto:axel@bluejayphenomenal.com">axel@bluejayphenomenal.com</a></li>
+            <li><a href="tel:+13477655676">(347) 765-5676</a></li>
+            <li>Tobyhanna, PA • Monroe County</li>
+            <li><a href="BlueJay%20Phenomenal%20Group%2C%20LLC%20-%20Capability%20Statement.pdf" download>Download Capability Statement (PDF)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 BlueJay Phenomenal Group, LLC. All Rights Reserved.</span>
+        <span>Pennsylvania Certified Small Business (573044-2026-10-SB) &amp; Micro Business (573044-2026-10-MBC)</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       JAVASCRIPT (COPY IDENTIFIERS, MOBILE MENU, MAILTO DISPATCH)
+       ======================================================================== -->
+  <script>
+    (function () {
+      // 1. Copy UEI & CAGE identifiers cleanly
+      const copyButtons = document.querySelectorAll('.copy-btn');
+      copyButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const textToCopy = btn.getAttribute('data-copy');
+          if (!textToCopy) return;
+          navigator.clipboard.writeText(textToCopy).then(() => {
+            const originalText = btn.textContent;
+            btn.textContent = 'Copied';
+            setTimeout(() => {
+              btn.textContent = originalText;
+            }, 1800);
+          });
+        });
+      });
+
+      // 2. Mobile Navigation Toggle
+      const menuToggle = document.getElementById('menu-toggle');
+      const navList = document.getElementById('primary-nav-list');
+      if (menuToggle && navList) {
+        menuToggle.addEventListener('click', () => {
+          const isOpen = navList.classList.toggle('open');
+          menuToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        navList.querySelectorAll('a').forEach((link) => {
+          link.addEventListener('click', () => {
+            navList.classList.remove('open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      // 3. Static-compatible Procurement Inquiry Form -> Pre-populated Mailto
+      const inquiryForm = document.getElementById('procurement-inquiry-form');
+      if (inquiryForm) {
+        inquiryForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = document.getElementById('inq-name').value.trim();
+          const org = document.getElementById('inq-org').value.trim();
+          const email = document.getElementById('inq-email').value.trim();
+          const type = document.getElementById('inq-type').value;
+          const message = document.getElementById('inq-message').value.trim();
+
+          const subject = encodeURIComponent(`[Procurement Inquiry - ${type}] ${org}`);
+          const body = encodeURIComponent(
+            `Point of Contact: ${name}\n` +
+            `Agency / Organization: ${org}\n` +
+            `Reply Email: ${email}\n` +
+            `Inquiry Category: ${type}\n\n` +
+            `Scope / Details:\n${message}`
+          );
+
+          window.location.href = `mailto:axel@bluejayphenomenal.com?subject=${subject}&body=${body}`;
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
